@@ -1,0 +1,20 @@
+[branch]
+autosetuprebase = always
+
+[color]
+ui = true
+
+[core]
+autocrlf = input
+excludesfile = ~/.dotfiles/git/gitignore_global
+trustctime = false
+
+[pull]
+rebase = preserve
+
+[push]
+default = upstream
+
+[user]
+email = mgoodness@widen.com
+name = Michael Goodness
