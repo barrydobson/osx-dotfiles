@@ -1,0 +1,17 @@
+Host *
+  StrictHostKeyChecking no
+
+Host 10.105.*
+  IdentityFile ~/.ssh/wip-stage
+  User core
+
+Host 172.16.*
+  IdentityFile ~/.ssh/2015-11-production
+
+Host 172.19.*
+  IdentityFile ~/.ssh/2015-11-staging
+
+Host github
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  User git
