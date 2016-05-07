@@ -33,12 +33,18 @@ alias gstp 'git stash pop'
 # Misc aliases
 alias curl-trace 'curl -w "@$HOME/.dotfiles/curl-format" -o /dev/null -s'
 alias dockerclean 'docker rm (docker ps -a -q); docker rmi (docker images -q --filter "dangling=true")'
-alias dockerconfig 'eval (docker-machine env default)'
+alias dockergo 'docker-machine restart; and eval (docker-machine env default)'
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
 alias grep 'ack -i'
 alias kubesys 'kubectl --namespace=kube-system'
 alias which 'type -a'
 
-set -x GOPATH ~/dev/golang
-set -x PATH $PATH $GOPATH/bin
+# Set variables
+set -gx EDITOR "vim"
+set -gx GOPATH "$HOME/dev/golang"
+set -gx GRADLE_OPTS "-Xmx512m"
+set -gx JAVA_HOME (/usr/libexec/java_home -v "1.8*")
+set -gx PATH $PATH "$GOPATH/bin" "$HOME/william/bin"
+
+set_secure

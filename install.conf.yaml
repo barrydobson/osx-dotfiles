@@ -1,5 +1,38 @@
 - clean: ['~']
 
+- defaults:
+    link:
+      create: true
+      force: true
+      relative: true
+      relink: true
+
 - link:
+    ~/.aws/config: aws-config
+    ~/.config/omf: omf
+    ~/.ssh/config: ssh-config
 
-
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [brew update]
+    - [brew upgrade]
+    - [brew install cfssl]
+    - [brew install curl wrk]
+    - [brew install fish]
+    - [brew install glide go]
+    - [brew install kubernetes-cli kubernetes-helm]
+    - [brew install graphviz terraform]
+    - [brew cask update]
+    - [brew cask install atom]
+    - [brew cask install dash]
+    - [brew cask install dockertoolbox]
+    - [brew cask install google-drive]
+    - [brew cask install radiant-player]
+    - [brew cask install tunnelblick]
+    - [brew cask install wireshark]
+    - [pip install crudini]
+    # - Install Atom packages here
+    - [bash -c 'grep -q /usr/local/bin/fish /etc/shells || echo /usr/local/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
+    # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
+    # - ['curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish', Installing Oh My Fish]
+    - [mkdir -p $GOPATH]
