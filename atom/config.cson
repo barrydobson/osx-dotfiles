@@ -1,0 +1,57 @@
+"*":
+  "atom-alignment": {}
+  "atom-beautify":
+    _analyticsUserId: "3461d490-c1f3-4a27-8742-294c10e80d68"
+  "atom-terminus":
+    args: "%d"
+  core:
+    disabledPackages: [
+      "autocomplete-go"
+      "go-debug"
+    ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".metadata_never_index"
+      ".DS_Store"
+      ".git*"
+      ".vagrant"
+    ]
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/mgoodness/dev"
+    themes: [
+      "atom-dark-ui"
+      "atom-monokai"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "cd39e93a-4b61-29d8-1f8d-2819196c7f70"
+  "file-types":
+    "^Dockerfile.*": "source.Dockerfile"
+  "git-history": {}
+  "go-plus":
+    goPath: "~/dev/golang"
+  hidpi: {}
+  "linter-flake8":
+    executablePath: "/usr/local/bin/flake8"
+  "merge-conflicts": {}
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "split-diff": true
+  "one-light-ui": {}
+  "tabs-to-spaces":
+    onSave: "untabify"
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".makefile.source":
+  "tabs-to-spaces":
+    onSave: "tabify"

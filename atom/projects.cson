@@ -1,0 +1,15 @@
+widen:
+  title: "Widen"
+  paths: [
+    "/Users/mgoodness/dev/william"
+    "/Users/mgoodness/dev/dam-config"
+    "/Users/mgoodness/dev/tf-wip"
+    "/Users/mgoodness/dev/wip"
+    "/Users/mgoodness/dev/tf-platform"
+    "/Users/mgoodness/dev/tf-modules"
+    "/Users/mgoodness/dev/tf-infra"
+    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/kubernetes-contrib"
+    "/Users/mgoodness/dev/docker-images"
+    "/Users/mgoodness/dev/tf-edge"
+    "/Users/mgoodness/dev/widen-pki"
+  ]

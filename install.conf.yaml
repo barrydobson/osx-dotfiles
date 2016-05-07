@@ -8,6 +8,12 @@
       relink: true
 
 - link:
+    ~/.atom/config.cson: atom/config.cson
+    ~/.atom/init.coffee: atom/init.coffee
+    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/projects.cson: atom/projects.cson
+    ~/.atom/snippets.cson: atom/snippets.cson
+    ~/.atom/styles.less: atom/styles.less
     ~/.aws/config: aws-config
     ~/.config/omf: omf
     ~/.ssh/config: ssh-config
@@ -19,7 +25,7 @@
     - [brew install cfssl]
     - [brew install curl wrk]
     - [brew install fish]
-    - [brew install glide go]
+    - [brew install glide go node]
     - [brew install kubernetes-cli kubernetes-helm]
     - [brew install graphviz terraform]
     - [brew cask update]
@@ -31,7 +37,7 @@
     - [brew cask install tunnelblick]
     - [brew cask install wireshark]
     - [pip install crudini]
-    # - Install Atom packages here
+    - [apm stars --install, Installing Atom packages]
     - [bash -c 'grep -q /usr/local/bin/fish /etc/shells || echo /usr/local/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
     # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
     # - ['curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish', Installing Oh My Fish]
