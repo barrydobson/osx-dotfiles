@@ -15,7 +15,10 @@
     ~/.atom/snippets.cson: atom/snippets.cson
     ~/.atom/styles.less: atom/styles.less
     ~/.aws/config: aws-config
-    ~/.config/omf: omf
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/functions/asp.fish: fish/asp.fish
+    ~/.config/fish/functions/fish_right_prompt.fish: fish/fish_right_prompt.fish
     ~/.ssh/config: ssh-config
 
 - shell:
@@ -24,21 +27,22 @@
     - [brew upgrade]
     - [brew install cfssl]
     - [brew install curl wrk]
-    - [brew install fish]
+    - [brew install fish fzf]
     - [brew install glide go node]
     - [brew install kubernetes-cli kubernetes-helm]
     - [brew install graphviz terraform]
     - [brew cask update]
     - [brew cask install atom]
     - [brew cask install dash]
-    - [brew cask install dockertoolbox]
     - [brew cask install google-drive]
-    - [brew cask install radiant-player]
     - [brew cask install tunnelblick]
     - [brew cask install wireshark]
     - [pip install crudini]
-    - [apm stars --install, Installing Atom packages]
     - [bash -c 'grep -q /usr/local/bin/fish /etc/shells || echo /usr/local/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
     # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
-    # - ['curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish', Installing Oh My Fish]
+    - ['curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman', Installing Fisherman]
+    - [fisher, Installing Fisherman plugins]
+    - [apm stars --install, Installing Atom packages]
     - [mkdir -p $GOPATH]
+    # - Docker for Mac
+    # - GPMDP

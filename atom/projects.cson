@@ -1,15 +1,30 @@
-widen:
-  title: "Widen"
+kubernetes:
+  title: "Kubernetes"
   paths: [
-    "/Users/mgoodness/dev/william"
+    "/Users/mgoodness/dev/docker-images"
+    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/kubernetes-contrib"
+    "/Users/mgoodness/dev/widen-pki"
+  ]
+terraform:
+  title: "Terraform"
+  paths: [
+    "/Users/mgoodness/dev/tf-edge"
+    "/Users/mgoodness/dev/tf-infra"
+    "/Users/mgoodness/dev/tf-modules"
+    "/Users/mgoodness/dev/tf-platform"
+    "/Users/mgoodness/dev/tf-wip"
+  ]
+widen:
+  title: "William"
+  paths: [
     "/Users/mgoodness/dev/dam-config"
+    "/Users/mgoodness/dev/william"
+  ]
+wip:
+  title: "WIP"
+  paths: [
+    "/Users/mgoodness/dev/dam-config"
+    "/Users/mgoodness/dev/tf-modules"
     "/Users/mgoodness/dev/tf-wip"
     "/Users/mgoodness/dev/wip"
-    "/Users/mgoodness/dev/tf-platform"
-    "/Users/mgoodness/dev/tf-modules"
-    "/Users/mgoodness/dev/tf-infra"
-    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/kubernetes-contrib"
-    "/Users/mgoodness/dev/docker-images"
-    "/Users/mgoodness/dev/tf-edge"
-    "/Users/mgoodness/dev/widen-pki"
   ]

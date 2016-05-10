@@ -8,6 +8,7 @@
     disabledPackages: [
       "autocomplete-go"
       "go-debug"
+      "atom-terminus"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
