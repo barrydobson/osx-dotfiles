@@ -1,6 +1,3 @@
 [submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule "Monokai_Fish_OSX"]
-	path = Monokai_Fish_OSX
-	url = git@github.com:benmarten/Monokai_Fish_OSX.git
+  path = dotbot
+  url = https://github.com/anishathalye/dotbot

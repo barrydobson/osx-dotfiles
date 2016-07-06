@@ -17,6 +17,7 @@ alias glog 'git log --color --decorate --graph --oneline'
 alias glstat 'git log --color --decorate --stat'
 alias gm 'git merge'
 alias gp 'git push'
+alias gpsu 'git push --set-upstream'
 alias gr 'git remote'
 alias grba 'git rebase --abort'
 alias grbc 'git rebase --continue'
@@ -33,6 +34,7 @@ alias gsta 'git stash'
 alias gstp 'git stash pop'
 
 # Misc aliases
+alias brewski 'brew update; and brew upgrade --all; and brew upgrade brew-cask; brew cleanup; brew cask cleanup; brew doctor'
 alias curl-trace 'curl -w "@$HOME/.dotfiles/curl-format" -o /dev/null -s'
 alias dockerclean 'docker rm (docker ps -a -q); docker rmi (docker images -q --filter "dangling=true")'
 alias fixbt 'sudo killall coreaudiod'
@@ -50,3 +52,5 @@ set -gx GOPATH "$HOME/dev/golang"
 set -gx GRADLE_OPTS "-Xmx512m"
 set -gx JAVA_HOME (/usr/libexec/java_home -v "1.8*")
 set -gx PATH $PATH "$GOPATH/bin" "$HOME/dev/william/bin"
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

@@ -1,27 +1,19 @@
-[profile edge]
-output = text
+[profile dev]
+output = json
 region = us-east-1
 
-[profile infra]
-output = text
+[profile edge]
+output = json
 region = us-east-1
 
 [profile personal]
-output = text
-region = us-east-1
-
-[profile platform]
-output = text
+output = json
 region = us-east-1
 
 [profile prod]
-output = text
+output = json
 region = us-east-1
 
 [profile stage]
-output = text
-region = us-east-1
-
-[profile wip]
-output = text
+output = json
 region = us-east-1

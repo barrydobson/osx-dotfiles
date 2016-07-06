@@ -1,30 +1,17 @@
-kubernetes:
-  title: "Kubernetes"
-  paths: [
-    "/Users/mgoodness/dev/docker-images"
-    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/kubernetes-contrib"
-    "/Users/mgoodness/dev/widen-pki"
-  ]
-terraform:
-  title: "Terraform"
-  paths: [
-    "/Users/mgoodness/dev/tf-edge"
-    "/Users/mgoodness/dev/tf-infra"
-    "/Users/mgoodness/dev/tf-modules"
-    "/Users/mgoodness/dev/tf-platform"
-    "/Users/mgoodness/dev/tf-wip"
-  ]
 widen:
-  title: "William"
+  title: "Widen"
   paths: [
+    "/Users/mgoodness/.dotfiles"
     "/Users/mgoodness/dev/dam-config"
-    "/Users/mgoodness/dev/william"
-  ]
-wip:
-  title: "WIP"
-  paths: [
-    "/Users/mgoodness/dev/dam-config"
+    "/Users/mgoodness/dev/docker-images"
+    "/Users/mgoodness/dev/edge"
+    "/Users/mgoodness/dev/terraform"
+    "/Users/mgoodness/dev/tf-edge"
     "/Users/mgoodness/dev/tf-modules"
-    "/Users/mgoodness/dev/tf-wip"
+    "/Users/mgoodness/dev/william"
     "/Users/mgoodness/dev/wip"
+    "/Users/mgoodness/dev/golang/src/k8s.io/kubernetes"
+    "/Users/mgoodness/dev/golang/src/k8s.io/contrib"
+    "/Users/mgoodness/dev/golang/src/github.com/prometheus/prometheus"
+    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/app-healthz"
   ]

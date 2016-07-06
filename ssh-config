@@ -1,17 +1,24 @@
 Host *
   StrictHostKeyChecking no
 
-Host 10.105.*
-  IdentityFile ~/.ssh/wip-stage
+Host 10.107.*
+  IdentityFile ~/.ssh/prod-platform
+
+Host 10.111.*
+  IdentityFile ~/.ssh/stage-platform
+
+Host 10.112.*
+  IdentityFile ~/.ssh/stage-kubernetes
+  IdentitiesOnly yes
   User core
 
-Host 172.16.*
-  IdentityFile ~/.ssh/2015-11-production
-
-Host 172.19.*
-  IdentityFile ~/.ssh/2015-11-staging
+Host 10.114.*
+  IdentityFile ~/.ssh/prod-kubernetes
+  IdentitiesOnly yes
+  User core
 
 Host github
   HostName github.com
   IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
   User git
