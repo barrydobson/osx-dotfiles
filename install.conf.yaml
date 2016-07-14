@@ -29,7 +29,7 @@
     - [brew install cfssl]
     - [brew install wrk]
     - [brew install delve glide go godep]
-    - [brew install etcd kubernetes-cli kubernetes-helm]
+    - [brew install kubernetes-cli kubernetes-helm]
     - [brew install fish fzf]
     - [brew install gpg2]
     - [brew install graphviz terraform]

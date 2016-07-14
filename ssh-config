@@ -1,6 +1,11 @@
 Host *
   StrictHostKeyChecking no
 
+Host 10.104.*
+  IdentityFile ~/.ssh/dev-kubernetes
+  IdentitiesOnly yes
+  User core
+
 Host 10.107.*
   IdentityFile ~/.ssh/prod-platform
 

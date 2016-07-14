@@ -1,7 +1,10 @@
 function fish_right_prompt
-  set -l right_prompt (set_color magenta)
+  set -l asp_color (set_color magenta)
+  set -l k8s_color (set_color blue)
+  set -l k8s_context (kubectl config current-context)
 
+  echo -e -n -s $k8s_color "($k8s_context)"
   if test -n "$AWS_DEFAULT_PROFILE"
-    echo -e -n -s $right_prompt "[$AWS_DEFAULT_PROFILE]"
+    echo -e -n -s $asp_color "[$AWS_DEFAULT_PROFILE]"
   end
 end
