@@ -1,3 +1,6 @@
 [submodule "dotbot"]
   path = dotbot
   url = https://github.com/anishathalye/dotbot
+[submodule "omf/pkg/asp"]
+	path = omf/pkg/asp
+	url = git@github.com:mgoodness/plugin-asp
