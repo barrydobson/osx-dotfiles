@@ -1,4 +1,4 @@
-[profile dev]
+[profile default]
 output = json
 region = us-east-1
 

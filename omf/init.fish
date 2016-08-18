@@ -41,7 +41,6 @@ alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
 alias grep 'ack -i'
 alias kubesys 'kubectl --namespace=kube-system'
-alias which 'type -a'
 
 # Terraform aliases
 alias tfgp 'terraform get --update; and terraform plan'
@@ -53,4 +52,4 @@ set -gx GRADLE_OPTS "-Xmx512m"
 set -gx JAVA_HOME (/usr/libexec/java_home -v "1.8*")
 set -gx PATH $PATH "$GOPATH/bin" "$HOME/dev/william/bin"
 
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+# test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
