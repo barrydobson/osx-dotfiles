@@ -17,6 +17,8 @@
     ~/.aws/config: aws-config
     ~/.config/omf: omf
     ~/.ssh/config: ssh-config
+    ~/.vim: vim
+    ~/.vimrc: vimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
@@ -42,9 +44,9 @@
     - [brew cask install wireshark]
     - [bash -c 'grep -q /usr/local/bin/fish /etc/shells || echo /usr/local/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
     # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
-    - ['curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish', Installing Oh My Fish]
+    # - ['curl -L http://get.oh-my.fish | fish', Installing Oh My Fish]
     - [mkdir -p $GOPATH]
     - [mkdir -p ~/bin]
     - ['curl -Lo ~/bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_darwin-amd64; and chmod +x ~/bin/cfssljson', Installing cfssljson]
-    - [apm stars --install, Installing Atom packages]
+    # - [apm stars --install, Installing Atom packages]
     # - GPMDP

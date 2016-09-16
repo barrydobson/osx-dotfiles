@@ -40,6 +40,8 @@
   "go-plus":
     goPath: "~/dev/golang"
   hidpi: {}
+  linter:
+    errorPanelHeight: 33
   "linter-flake8":
     executablePath: "/usr/local/bin/flake8"
   "merge-conflicts": {}
@@ -51,17 +53,12 @@
       linterDecorationsZIndex: 0
       "split-diff": true
   "one-light-ui": {}
-  "tabs-to-spaces":
-    onSave: "untabify"
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".go.source":
-  "tabs-to-spaces":
-    onSave: "tabify"
-".java.source":
   "tabs-to-spaces":
     onSave: "tabify"
 ".makefile.source":

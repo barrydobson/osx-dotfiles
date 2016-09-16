@@ -1,17 +1,13 @@
-widen:
-  title: "Widen"
-  paths: [
-    "/Users/mgoodness/.dotfiles"
-    "/Users/mgoodness/dev/dam-config"
-    "/Users/mgoodness/dev/docker-images"
-    "/Users/mgoodness/dev/edge"
-    "/Users/mgoodness/dev/terraform"
-    "/Users/mgoodness/dev/tf-edge"
-    "/Users/mgoodness/dev/tf-modules"
-    "/Users/mgoodness/dev/william"
-    "/Users/mgoodness/dev/wip"
-    "/Users/mgoodness/dev/golang/src/k8s.io/kubernetes"
-    "/Users/mgoodness/dev/golang/src/k8s.io/contrib"
-    "/Users/mgoodness/dev/golang/src/github.com/prometheus/prometheus"
-    "/Users/mgoodness/dev/golang/src/github.com/mgoodness/app-healthz"
-  ]
+[
+  {
+    title: "Widen"
+    group: ""
+    paths: [
+      "/Users/mgoodness/.dotfiles"
+    ]
+    icon: "icon-chevron-right"
+    settings: {}
+    devMode: false
+    template: null
+  }
+]
