@@ -41,7 +41,11 @@ alias dockerclean 'docker rm (docker ps -a -q); docker rmi (docker images -q --f
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
 alias grep 'ack -i'
+
+# Kubernetes aliases
 alias kubesys 'kubectl --namespace=kube-system'
+alias kube-edge 'kubectl --namespace=edge'
+alias kube-wip-stage 'kubectl --namespace=wip-stage'
 
 # Terraform aliases
 alias tfgp 'terraform get --update; and terraform plan'

@@ -53,6 +53,10 @@
       linterDecorationsZIndex: 0
       "split-diff": true
   "one-light-ui": {}
+  "terminal-plus":
+    core: {}
+    toggles:
+      autoClose: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true

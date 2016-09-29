@@ -4,6 +4,50 @@
     group: ""
     paths: [
       "/Users/mgoodness/.dotfiles"
+      "/Users/mgoodness/dev/dam-config"
+      "/Users/mgoodness/dev/terraform"
+      "/Users/mgoodness/dev/tf-edge"
+      "/Users/mgoodness/dev/tf-modules"
+      "/Users/mgoodness/dev/william"
+      "/Users/mgoodness/dev/k8s-manifests"
+      "/Users/mgoodness/dev/pki"
+      "/Users/mgoodness/dev/golang/src/github.com/mgoodness/k8s-bot"
+      "/Users/mgoodness/dev/golang/src/github.com/mgoodness/k8s-eventer"
+      "/Users/mgoodness/dev/platform-docs"
+      "/Users/mgoodness/dev/docker-ubuntu"
+      "/Users/mgoodness/dev/docker-server-jre"
+      "/Users/mgoodness/dev/docker-kubectl"
+      "/Users/mgoodness/dev/docker-fluentd-k8s-cloudwatch-logs"
+      "/Users/mgoodness/dev/docker-elasticsearch"
+      "/Users/mgoodness/dev/docker-caddy"
+      "/Users/mgoodness/dev/docker-widen-stage"
+    ]
+    icon: "icon-chevron-right"
+    settings: {}
+    devMode: false
+    template: null
+  }
+  {
+    title: "Configurations"
+    group: ""
+    paths: [
+      "/Users/mgoodness/dev/dam-config"
+      "/Users/mgoodness/dev/terraform"
+      "/Users/mgoodness/dev/tf-edge"
+      "/Users/mgoodness/dev/tf-modules"
+      "/Users/mgoodness/dev/william"
+      "/Users/mgoodness/dev/k8s-manifests"
+      "/Users/mgoodness/dev/pki"
+      "/Users/mgoodness/dev/golang/src/github.com/mgoodness/k8s-bot"
+      "/Users/mgoodness/dev/golang/src/github.com/mgoodness/k8s-eventer"
+      "/Users/mgoodness/dev/platform-docs"
+      "/Users/mgoodness/dev/docker-ubuntu"
+      "/Users/mgoodness/dev/docker-server-jre"
+      "/Users/mgoodness/dev/docker-kubectl"
+      "/Users/mgoodness/dev/docker-fluentd-k8s-cloudwatch-logs"
+      "/Users/mgoodness/dev/docker-elasticsearch"
+      "/Users/mgoodness/dev/docker-caddy"
+      "/Users/mgoodness/dev/docker-widen-stage"
     ]
     icon: "icon-chevron-right"
     settings: {}
