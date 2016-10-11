@@ -28,6 +28,8 @@
     - [brew install cfssl]
     - [brew install ctags]
     - [brew install delve glide go godep]
+    - [brew install homebrew/completions/brew-cask-completion]
+    - [brew install hub]
     - [brew install kubernetes-cli kubernetes-helm]
     - [brew install fish]
     - [brew install fzf]
@@ -40,6 +42,7 @@
     - [brew cask install dash]
     - [brew cask install docker]
     - [brew cask install google-drive]
+    - [brew cask install google-play-music-desktop-player]
     - [brew cask install iterm2]
     - [brew cask install soundcleod]
     - [brew cask install vagrant vagrant-manager virtualbox]
@@ -51,4 +54,3 @@
     - [mkdir -p ~/bin]
     - ['curl -Lo ~/bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_darwin-amd64; and chmod +x ~/bin/cfssljson', Installing cfssljson]
     # - [apm stars --install, Installing Atom packages]
-    # - GPMDP

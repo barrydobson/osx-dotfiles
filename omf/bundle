@@ -1,4 +1,4 @@
+package aws
+package tab
 theme clearance
 theme default
-theme gnuykeaj
-theme pure

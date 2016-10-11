@@ -35,7 +35,7 @@ alias gsta 'git stash'
 alias gstp 'git stash pop'
 
 # Misc aliases
-alias brewski 'brew update; and brew upgrade --all; and brew upgrade brew-cask; brew cleanup; brew cask cleanup; brew doctor'
+alias brewski 'brew update; and brew upgrade; brew cleanup; brew cask cleanup; brew doctor'
 alias curl-trace 'curl -w "@$HOME/.dotfiles/curl-format" -o /dev/null -s'
 alias dockerclean 'docker rm (docker ps -a -q); docker rmi (docker images -q --filter "dangling=true")'
 alias fixbt 'sudo killall coreaudiod'
@@ -43,9 +43,11 @@ alias flushdns 'sudo killall -HUP mDNSResponder'
 alias grep 'ack -i'
 
 # Kubernetes aliases
-alias kubesys 'kubectl --namespace=kube-system'
 alias kube-edge 'kubectl --namespace=edge'
-alias kube-wip-stage 'kubectl --namespace=wip-stage'
+alias kube-lens 'kubectl --namespace=lens'
+alias kube-plat 'kubectl --namespace=platform'
+alias kube-sys 'kubectl --namespace=kube-system'
+alias kube-wip 'kubectl --namespace=wip'
 
 # Terraform aliases
 alias tfgp 'terraform get --update; and terraform plan'

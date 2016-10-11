@@ -25,6 +25,7 @@
     ]
   editor:
     invisibles: {}
+    preferredLineLength: 100
     showIndentGuide: true
     showInvisibles: true
   "env-from-shell":
