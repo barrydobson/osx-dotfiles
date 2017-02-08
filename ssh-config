@@ -1,24 +1,14 @@
 Host *
   StrictHostKeyChecking no
 
-Host 10.104.*
-  IdentityFile ~/.ssh/dev-kubernetes
-  IdentitiesOnly yes
-  User core
-
 Host 10.107.*
   IdentityFile ~/.ssh/prod-platform
 
 Host 10.111.*
   IdentityFile ~/.ssh/stage-platform
 
-Host 10.112.*
-  IdentityFile ~/.ssh/stage-kubernetes
-  IdentitiesOnly yes
-  User core
-
-Host 10.114.*
-  IdentityFile ~/.ssh/prod-kubernetes
+Host 10.150.*
+  IdentityFile ~/.ssh/kubit
   IdentitiesOnly yes
   User core
 

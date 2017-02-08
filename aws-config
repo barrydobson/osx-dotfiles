@@ -1,4 +1,12 @@
+[profile billing]
+output = json
+region = us-east-1
+
 [profile default]
+output = json
+region = us-east-1
+
+[profile dev]
 output = json
 region = us-east-1
 
@@ -23,5 +31,9 @@ output = json
 region = us-east-1
 
 [profile stage]
+output = json
+region = us-east-1
+
+[stage]
 output = json
 region = us-east-1
