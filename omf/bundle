@@ -1,4 +1,5 @@
 package aws
+package nvm
 package tab
 theme clearance
 theme default
