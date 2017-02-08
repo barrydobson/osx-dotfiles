@@ -4,6 +4,9 @@ autosetuprebase = always
 [color]
 ui = true
 
+[commit]
+gpgsign = true
+
 [core]
 autocrlf = input
 excludesfile = ~/.dotfiles/git/gitignore_global
@@ -18,3 +21,4 @@ default = upstream
 [user]
 email = mgoodness@widen.com
 name = Michael Goodness
+signingkey = EA8E12FD
