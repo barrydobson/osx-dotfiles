@@ -1,6 +1,6 @@
 function fish_right_prompt
-  set -l aws_color (set_color magenta)
-  set -l k8s_color (set_color blue)
+  set -l aws_color (set_color red)
+  set -l k8s_color (set_color magenta)
   set -l k8s_context (kubectl config current-context)
 
   if test -n "$aws_profile"

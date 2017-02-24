@@ -1,4 +1,5 @@
 package aws
+package brew
 package nvm
 package tab
 theme clearance
