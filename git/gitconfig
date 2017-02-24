@@ -1,24 +1,24 @@
 [branch]
-autosetuprebase = always
-
+	autosetuprebase = always
 [color]
-ui = true
-
+	ui = true
 [commit]
-gpgsign = true
-
+	gpgsign = true
 [core]
-autocrlf = input
-excludesfile = ~/.dotfiles/git/gitignore_global
-trustctime = false
-
+	autocrlf = input
+	excludesfile = ~/.dotfiles/git/gitignore_global
+	trustctime = false
 [pull]
-rebase = preserve
-
+	rebase = preserve
 [push]
-default = upstream
-
+	default = upstream
 [user]
-email = mgoodness@widen.com
-name = Michael Goodness
-signingkey = EA8E12FD
+	email = mgoodness@widen.com
+	name = Michael Goodness
+	signingkey = EA8E12FD
+[hub]
+	protocol = ssh
+[web]
+	browser = open
+[diff]
+	tool = vimdiff
