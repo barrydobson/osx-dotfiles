@@ -10,13 +10,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-repeat'
+
+Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'justinmk/vim-sneak'
+Plug 'junegunn/fzf'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-smooth-scroll'
 call plug#end()
@@ -26,13 +32,20 @@ let mapleader = ","
 colorscheme molokai
 let g:airline_theme='molokai'
 
+" Enable hidden buffers
+set hidden
+
 " Invisibles settings
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Display relative line numbers, except absolute current line number
 set relativenumber
 set number
+
+" Ignore case when searching, except if caps (http://vim.wikia.com/wiki/Searching)
+set ignorecase
+set smartcase
 
 " Tab settings
 set expandtab
@@ -52,6 +65,15 @@ if has('persistent_undo')
   set undolevels=1000
   set undoreload=10000
 endif
+
+" Window focus
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" vim-better-whitespace (https://github.com/ntpeters/vim-better-whitespace)
+autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " vim-move (https://github.com/matze/vim-move)
 let g:move_key_modifier = 'C'

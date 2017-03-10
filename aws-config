@@ -1,39 +1,3 @@
-[profile billing]
-output = json
-region = us-east-1
-
-[profile default]
-output = json
-region = us-east-1
-
-[profile dev]
-output = json
-region = us-east-1
-
-[profile edge]
-output = json
-region = us-east-1
-
 [profile personal]
-output = json
-region = us-east-1
-
-[profile prod]
-output = json
-region = us-east-1
-
-[profile si-prod]
-output = json
-region = us-east-1
-
-[profile si-stage]
-output = json
-region = us-east-1
-
-[profile stage]
-output = json
-region = us-east-1
-
-[stage]
 output = json
 region = us-east-1
