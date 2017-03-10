@@ -43,3 +43,6 @@
 [submodule "omf/pkg/kube-rotate"]
 	path = omf/pkg/kube-rotate
 	url = git@github.com:mgoodness/plugin-kube-rotate.git
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git

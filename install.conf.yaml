@@ -19,57 +19,55 @@
     ~/.gnupg/gpg.conf: gpg/gpg.conf
     ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
     ~/.ssh/config: ssh-config
-    ~/.vim: vim
     ~/.vimrc: vimrc
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    - [brew tap beeftornado/rmtree]
-    - [brew tap caskroom/versions]
-    - [brew tap homebrew/versions]
-    - [brew tap vitorgalvao/tiny-scripts]
-    - [brew update]
-    - [brew upgrade]
-    - [brew install awscli]
-    - [brew install bfg]
-    - [brew install brew-rmtree cask-repair]
-    - [brew install cfssl]
-    - [brew install delve glide go godep govendor]
-    - [brew install etcd kubernetes-helm kubernetes-cli stern]
-    - [brew install brew-cask-completion docker-completion]
-    - [brew install bash fish]
-    - [brew install fzf the_silver_searcher]
-    - [brew install gpg2 gpg-agent pinentry-mac]
-    - [brew install graphviz terraform]
-    - [brew install hub]
-    - [brew install lnav]
-    - [brew install macvim --with-override-system-vim]
-    - [brew install mas]
-    - [brew install node]
-    - [brew install openssl]
-    - [brew install prometheus]
-    - [brew install python]
-    - [brew install watch]
-    - [brew cask update]
-    - [brew cask install atom]
-    - [brew cask install caffeine]
-    - [brew cask install cakebrew]
-    - [brew cask install dash]
-    - [brew cask install docker minikube]
-    - [brew cask install gitter]
-    - [brew cask install google-chrome]
-    - [brew cask install google-drive]
-    - [brew cask install google-play-music-desktop-player]
-    - [brew cask install intellij-idea-ce java]
-    - [brew cask install iterm2]
-    - [brew cask install slack]
-    - [brew cask install soundcleod]
-    - [brew cask install viscosity]
-    - [bash -c 'grep -q $(brew --prefix)/bin/fish /etc/shells || echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
-    - [bash -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
-    # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
-    # - ['curl -L http://get.oh-my.fish | fish', Installing Oh My Fish]
-    - [mkdir -p $GOPATH]
-    - [mkdir -p ~/bin]
-    - [/usr/local/opt/fzf/install]
-    # - [fish_update_completions]
+  - [git submodule update --init --recursive, Installing submodules]
+
+- tap:
+  - beeftornado/rmtree
+  - caskroom/versions
+  - homebrew/versions
+  - vitorgalvao/tiny-scripts
+
+- brew:
+  - awscli
+  - brew-rmtree cask-repair
+  - cfssl
+  - delve glide go godep govendor
+  - etcd kubernetes-helm kubernetes-cli stern
+  - brew-cask-completion docker-completion
+  - bash fish zsh
+  - fzf the_silver_searcher
+  - gpg2 gpg-agent pinentry-mac
+  - graphviz terraform
+  - hub
+  - lnav
+  - macvim --with-override-system-vim
+  - mas
+  - openssl
+  - prometheus
+  - watch
+
+- cask:
+  - atom
+  - caffeine
+  - dash
+  - docker minikube
+  - google-chrome
+  - google-play-music-desktop-player
+  - iterm2
+  - slack
+  - soundcleod
+  # - viscosity
+
+# shell:
+#   - [bash -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
+#   - [bash -c 'grep -q $(brew --prefix)/bin/fish /etc/shells || echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
+#   - [bash -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells', Adding zsh shell]
+#   # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
+#   # - ['curl -L http://get.oh-my.fish | fish', Installing Oh My Fish]
+#   - [mkdir -p $GOPATH]
+#   - [mkdir -p ~/bin]
+#   - [/usr/local/opt/fzf/install]
+#   # - [fish_update_completions]
