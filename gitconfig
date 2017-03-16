@@ -1,0 +1,24 @@
+[branch]
+  autosetuprebase = always
+[color]
+  ui = true
+[commit]
+  gpgsign = true
+[core]
+  autocrlf = input
+  excludesfile = ~/.gitignore
+  trustctime = false
+[pull]
+  rebase = preserve
+[push]
+  default = upstream
+[user]
+  email = mgoodness@gmail.com
+  name = Michael Goodness
+  signingkey = EA8E12FD
+[hub]
+  protocol = ssh
+[web]
+  browser = open
+[diff]
+  tool = vimdiff

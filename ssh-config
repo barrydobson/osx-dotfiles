@@ -1,19 +1,6 @@
-Host *
-  StrictHostKeyChecking no
-
-Host 10.107.*
-  IdentityFile ~/.ssh/prod-platform
-
-Host 10.111.*
-  IdentityFile ~/.ssh/stage-platform
-
-Host 10.150.*
-  IdentityFile ~/.ssh/kubit
-  IdentitiesOnly yes
-  User core
-
 Host github
   HostName github.com
   IdentityFile ~/.ssh/id_rsa
   IdentitiesOnly yes
+  UseKeychain yes
   User git

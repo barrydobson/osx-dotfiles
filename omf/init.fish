@@ -34,18 +34,9 @@ alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
 
 # Kubernetes aliases
-alias kube-coll 'kubectl --namespace=collective'
-alias kube-dam 'kubectl --namespace=dam'
 alias kube-drain 'kubectl drain --force --ignore-daemonsets --delete-local-data'
-alias kube-edge 'kubectl --namespace=edge'
-alias kube-juice 'kubectl --namespace=polyjuice'
-alias kube-lens 'kubectl --namespace=lens'
 alias kube-mon 'kubectl --namespace=monitoring'
-alias kube-plat 'kubectl --namespace=platform'
-alias kube-print 'kubectl --namespace=printui-connector'
 alias kube-sys 'kubectl --namespace=kube-system'
-alias kube-wip 'kubectl --namespace=wip'
-alias kube-wolf 'kubectl --namespace=graywolf'
 
 # Terraform aliases
 alias tfgp 'terraform get --update; and terraform plan'

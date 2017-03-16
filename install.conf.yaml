@@ -8,66 +8,85 @@
       relink: true
 
 - link:
-    ~/.atom/config.cson: atom/config.cson
-    ~/.atom/init.coffee: atom/init.coffee
-    ~/.atom/keymap.cson: atom/keymap.cson
-    ~/.atom/projects.cson: atom/projects.cson
-    ~/.atom/snippets.cson: atom/snippets.cson
-    ~/.atom/styles.less: atom/styles.less
     ~/.aws/config: aws-config
-    ~/.config/omf: omf
-    ~/.gnupg/gpg.conf: gpg/gpg.conf
-    ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore-global
+    # ~/.gnupg/gpg.conf: gpg/gpg.conf
+    # ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
     ~/.ssh/config: ssh-config
     ~/.vimrc: vimrc
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
 - tap:
-  - beeftornado/rmtree
   - caskroom/versions
   - homebrew/versions
   - vitorgalvao/tiny-scripts
 
 - brew:
   - awscli
-  - brew-rmtree cask-repair
+  - cask-repair
   - cfssl
-  - delve glide go godep govendor
+  - dockutil
+  - glide go godep govendor
   - etcd kubernetes-helm kubernetes-cli stern
   - brew-cask-completion docker-completion
-  - bash fish zsh
+  - bash zsh
   - fzf the_silver_searcher
-  - gpg2 gpg-agent pinentry-mac
+  - gpg2
   - graphviz terraform
   - hub
   - lnav
   - macvim --with-override-system-vim
-  - mas
   - openssl
   - prometheus
+  - tmux
   - watch
+  - zsh-autosuggestions zsh-syntax-highlighting
 
 - cask:
   - atom
   - caffeine
+  - cheatsheet
   - dash
   - docker minikube
   - google-chrome
   - google-play-music-desktop-player
   - iterm2
+  - java
+  - keybase
   - slack
   - soundcleod
-  # - viscosity
 
-# shell:
-#   - [bash -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
-#   - [bash -c 'grep -q $(brew --prefix)/bin/fish /etc/shells || echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
-#   - [bash -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells', Adding zsh shell]
-#   # - [chsh -s /usr/local/bin/fish, Setting fish as shell]
-#   # - ['curl -L http://get.oh-my.fish | fish', Installing Oh My Fish]
-#   - [mkdir -p $GOPATH]
-#   - [mkdir -p ~/bin]
-#   - [/usr/local/opt/fzf/install]
-#   # - [fish_update_completions]
+- shell:
+  - [sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
+  - [sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells', Adding zsh shell]
+  - [chsh -s /usr/local/bin/zsh, Setting zsh as shell]
+
+- shell:
+  - mkdir -p ~/bin
+  - /usr/local/opt/fzf/install --all
+  - dockutil --remove Safari
+  - dockutil --remove Launchpad
+  - dockutil --remove Mail
+  - dockutil --remove Contacts
+  - dockutil --remove Calendar
+  - dockutil --remove Notes
+  - dockutil --remove Reminders
+  - dockutil --remove Maps
+  - dockutil --remove Photos
+  - dockutil --remove FaceTime
+  - dockutil --remove iTunes
+  - dockutil --remove iBooks
+  - dockutil --remove 'App Store'
+  - dockutil --remove 'System Preferences'
+  - dockutil --add /Applications/iTerm.app --after Finder
+  - dockutil --add '/Applications/Google Chrome.app' --after iTerm
+  - dockutil --add /Applications/Slack.app --after 'Google Chrome'
+  - dockutil --add /Applications/zoom.us.app --after Slack
+  - dockutil --add '/Applications/Google Play Music Desktop Player.app' --after zoom.us
+  - dockutil --add '/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app' --after 'Google Play Music Desktop Player'
+  # - [bash -c 'git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts', Installing Powerline fonts]
