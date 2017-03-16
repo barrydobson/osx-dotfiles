@@ -11,8 +11,6 @@
     ~/.aws/config: aws-config
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
-    # ~/.gnupg/gpg.conf: gpg/gpg.conf
-    # ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
     ~/.ssh/config: ssh-config
     ~/.vimrc: vimrc
     ~/.zsh: zsh
