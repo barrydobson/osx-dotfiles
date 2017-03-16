@@ -8,7 +8,6 @@
       relink: true
 
 - link:
-    ~/.aws/config: aws-config
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
     ~/.ssh/config: ssh-config

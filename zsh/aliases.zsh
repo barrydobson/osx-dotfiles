@@ -29,8 +29,7 @@ alias gshow='git show --decorate'
 alias gst='git status --short --branch'
 
 # Misc
-alias brewski='brew update; and brew upgrade; brew cleanup; brew cask cleanup; brew doctor'
-alias curl-trace='curl -w "@$HOME/.dotfiles/curl-format" -o /dev/null -s'
+alias brewski='brew update && brew upgrade; brew cleanup; brew cask cleanup; brew doctor'
 alias dockerclean='docker system prune --all'
 alias fixbt='sudo killall coreaudiod'
 alias flushdns='sudo killall -HUP mDNSResponder'
@@ -41,4 +40,4 @@ alias kube-mon='kubectl --namespace=monitoring'
 alias kube-sys='kubectl --namespace=kube-system'
 
 # Terraform
-alias tfgp='terraform get --update; and terraform plan'
+alias tfgp='terraform get --update && terraform plan'
