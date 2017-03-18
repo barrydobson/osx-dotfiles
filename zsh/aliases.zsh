@@ -1,3 +1,6 @@
+# Vim
+alias vrc="vim ~/.vimrc"
+
 # Zsh
 alias zrc="vim ~/.zshrc"
 alias reload="source ~/.zshrc"

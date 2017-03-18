@@ -39,6 +39,9 @@ set hidden
 nnoremap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" Highlight column 80 and > 120
+let &colorcolumn="80,".join(range(120,999),",")
+
 " Display relative line numbers, except absolute current line number
 set relativenumber
 set number
@@ -66,17 +69,20 @@ if has('persistent_undo')
   set undoreload=10000
 endif
 
+" Source vimrc after saving
+autocmd bufwritepost .vimrc source $MYVIMRC
+
+" Open vimrc in new vsplit
+nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
+
 " Window focus
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " vim-better-whitespace (https://github.com/ntpeters/vim-better-whitespace)
 autocmd BufEnter * EnableStripWhitespaceOnSave
-
-" vim-move (https://github.com/matze/vim-move)
-let g:move_key_modifier = 'C'
 
 " vim-sneak (https://github.com/justinmk/vim-sneak)
 " Map using nmap, not nnoremap. That seems to cause problems.
@@ -84,6 +90,9 @@ nmap <Tab> <Plug>Sneak_s
 nmap <S-Tab> <Plug>Sneak_S
 vmap <Tab> <Plug>Sneak_s
 vmap <S-Tab> <Plug>Sneak_S
+
+" vim-move (https://github.com/matze/vim-move)
+let g:move_key_modifier = 'C'
 
 " vim-smooth-scroll (https://github.com/terryma/vim-smooth-scroll)
 noremap <silent> <C-u> :call smooth_scroll#up(&scroll, 30, 2)<CR>
