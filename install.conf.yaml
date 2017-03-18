@@ -25,24 +25,25 @@
 
 - brew:
   - awscli
+  - bash zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+  - brew-cask-completion docker-completion
   - cask-repair
   - cfssl
   - dockutil
-  - glide go godep govendor
   - etcd kubernetes-helm kubernetes-cli stern
-  - brew-cask-completion docker-completion
-  - bash zsh
   - fzf the_silver_searcher
+  - git
+  - glide go godep govendor
   - gpg2
   - graphviz terraform
   - hub
+  - lastpass-cli --with-pinentry
   - lnav
   - macvim --with-override-system-vim
   - openssl
   - prometheus
   - tmux
   - watch
-  - zsh-autosuggestions zsh-syntax-highlighting
 
 - cask:
   - atom
@@ -62,10 +63,11 @@
   - [sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
   - [sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells', Adding zsh shell]
   - [chsh -s /usr/local/bin/zsh, Setting zsh as shell]
-
-- shell:
   - mkdir -p ~/bin
   - /usr/local/opt/fzf/install --all
+  - helm init --client-only
+
+- shell:
   - dockutil --remove Safari
   - dockutil --remove Launchpad
   - dockutil --remove Mail

@@ -1,4 +1,6 @@
-export PATH=${HOME}/bin:$(go env GOPATH)/bin:${PATH}
+# https://github.com/xero/dotfiles/blob/master/zsh/.zsh/environment.zsh
+
+export PATH=~/bin:$(go env GOPATH)/bin:${PATH}
 export GOPATH=$(go env GOPATH)
 
 export EDITOR=vim
@@ -14,3 +16,5 @@ export LC_MONETARY=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export LESSCHARSET=utf-8
+
+export CLICOLOR=1
