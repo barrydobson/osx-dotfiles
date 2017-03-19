@@ -8,8 +8,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-sensible'
@@ -30,7 +28,11 @@ call plug#end()
 let mapleader = ","
 
 colorscheme molokai
-let g:airline_theme='molokai'
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " Enable hidden buffers
 set hidden

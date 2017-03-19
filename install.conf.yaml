@@ -8,9 +8,11 @@
       relink: true
 
 - link:
+    ~/.config/powerline: powerline
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
     ~/.ssh/config: ssh-config
+    ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zsh: zsh
     ~/.zshrc: zshrc
@@ -39,7 +41,7 @@
   - hub
   - lastpass-cli --with-pinentry
   - lnav
-  - macvim --with-override-system-vim
+  - python macvim --with-override-system-vim
   - openssl
   - prometheus
   - tmux
@@ -66,6 +68,7 @@
   - mkdir -p ~/bin
   - /usr/local/opt/fzf/install --all
   - helm init --client-only
+  - pip install powerline-status
 
 - shell:
   - dockutil --remove Safari

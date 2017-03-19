@@ -2,6 +2,7 @@
 
 export PATH=~/bin:$(go env GOPATH)/bin:${PATH}
 export GOPATH=$(go env GOPATH)
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
 
 export EDITOR=vim
 export VISUAL=vim
