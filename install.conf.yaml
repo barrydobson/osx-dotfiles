@@ -68,7 +68,7 @@
   - mkdir -p ~/bin
   - /usr/local/opt/fzf/install --all
   - helm init --client-only
-  - pip install powerline-status
+  - pip install powerline-status powerline-gitstatus
 
 - shell:
   - dockutil --remove Safari
