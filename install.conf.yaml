@@ -44,7 +44,7 @@
   - python macvim --with-override-system-vim
   - openssl
   - prometheus
-  - tmux
+  - reattach-to-user-namespace tmux
   - watch
 
 - cask:

@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
@@ -36,6 +37,9 @@ python del powerline_setup
 
 " Enable hidden buffers
 set hidden
+
+" Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noshowmode
 
 " Invisibles settings
 nnoremap <leader>l :set list!<CR>

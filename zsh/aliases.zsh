@@ -1,3 +1,6 @@
+# Tmux
+alias vtm="vim ~/.tmux.conf"
+
 # Vim
 alias vrc="vim ~/.vimrc"
 
