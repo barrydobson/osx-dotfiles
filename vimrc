@@ -10,6 +10,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
@@ -30,16 +33,15 @@ let mapleader = ","
 
 colorscheme molokai
 
-" Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 " Enable hidden buffers
 set hidden
 
 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode
+
+" Set mapping & keycode delays
+" set timeoutlen=1000
+" set ttimeoutlen=10
 
 " Invisibles settings
 nnoremap <leader>l :set list!<CR>
@@ -47,6 +49,9 @@ set listchars=tab:▸\ ,eol:¬
 
 " Highlight column 80 and > 120
 let &colorcolumn="80,".join(range(120,999),",")
+
+" Toggle paste
+set pastetoggle=<F2>
 
 " Display relative line numbers, except absolute current line number
 set relativenumber
@@ -76,10 +81,16 @@ if has('persistent_undo')
 endif
 
 " Source vimrc after saving
-autocmd bufwritepost .vimrc source $MYVIMRC
+augroup reload_vimrc
+  autocmd!
+  autocmd bufwritepost $MYVIMRC nested source $MYVIMRC
+augroup END
 
 " Open vimrc in new vsplit
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
+
+" No Ex mode
+nnoremap Q <nop>
 
 " Window focus
 nnoremap <C-h> <C-w>h
@@ -98,10 +109,79 @@ vmap <Tab> <Plug>Sneak_s
 vmap <S-Tab> <Plug>Sneak_S
 
 " vim-move (https://github.com/matze/vim-move)
-let g:move_key_modifier = 'C'
+" http://vim.wikia.com/wiki/Mapping_fast_keycodes_in_terminal_Vim
+set <F20>=j
+set <F21>=k
+vmap <F20> <Plug>MoveBlockDown
+vmap <F21> <Plug>MoveBlockUp
+nmap <F20> <Plug>MoveLineDown
+nmap <F21> <Plug>MoveLineUp
 
 " vim-smooth-scroll (https://github.com/terryma/vim-smooth-scroll)
 noremap <silent> <C-u> :call smooth_scroll#up(&scroll, 30, 2)<CR>
 noremap <silent> <C-d> :call smooth_scroll#down(&scroll, 30, 2)<CR>
 noremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 30, 4)<CR>
 noremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 30, 4)<CR>
+
+" Lightline
+let g:lightline = {
+		\ 'colorscheme': 'molokai',
+		\ 'active': {
+		\   'left': [ [ 'mode', 'paste' ],
+		\             [ 'fugitive', 'filename' ] ]
+		\ },
+		\ 'component_function': {
+		\   'fugitive': 'LightlineFugitive',
+		\   'readonly': 'LightlineReadonly',
+		\   'modified': 'LightlineModified',
+		\   'filename': 'LightlineFilename'
+		\ },
+		\ 'separator': { 'left': '', 'right': '' },
+		\ 'subseparator': { 'left': '', 'right': '' }
+		\ }
+
+function! LightlineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightlineFilename()
+  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+				\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+				\ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+" Promptline
+let g:promptline_theme = 'lightline'
+let g:promptline_preset = {
+		\'a' : [ promptline#slices#host() ],
+		\'b' : [ promptline#slices#user() ],
+		\'c' : [ promptline#slices#cwd() ],
+		\'y' : [ promptline#slices#vcs_branch() , promptline#slices#git_status() ],
+		\'warn' : [ promptline#slices#last_exit_code() ]
+    \ }

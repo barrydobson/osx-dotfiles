@@ -12,3 +12,8 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 bindkey -v
+
+source /usr/local/opt/fzf/shell/key-bindings.zsh
+
+# bindkey '^T' fzf-completion
+# bindkey '^I' $fzf_default_completion
