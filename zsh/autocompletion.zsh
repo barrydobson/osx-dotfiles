@@ -1,10 +1,10 @@
 # https://github.com/xero/dotfiles/blob/master/zsh/.zsh/autocompletion.zsh
 
-fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/completions $fpath)
 
 autoload -Uz compinit
 compinit
-# autoload -U ~/.zsh/completion/*(:t)
+# autoload -U ~/.zsh/completions/*(:t)
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
