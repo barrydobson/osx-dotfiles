@@ -175,13 +175,3 @@ function! LightlineFilename()
 				\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
 				\ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
 endfunction
-
-" Promptline
-let g:promptline_theme = 'lightline'
-let g:promptline_preset = {
-		\'a' : [ promptline#slices#host() ],
-		\'b' : [ promptline#slices#user() ],
-		\'c' : [ promptline#slices#cwd() ],
-		\'y' : [ promptline#slices#vcs_branch() , promptline#slices#git_status() ],
-		\'warn' : [ promptline#slices#last_exit_code() ]
-    \ }
