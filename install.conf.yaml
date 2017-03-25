@@ -8,12 +8,12 @@
       relink: true
 
 - link:
+    ~/.config/base16-shell: base16-shell
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
-    ~/.promptline: promptline
     ~/.ssh/config: ssh-config
     ~/.tmux.conf: tmux.conf
-    ~/.tmuxline: tmuxline
+    ~/.vim/autoload/lightline: vim/autoload/lightline
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zsh: zsh

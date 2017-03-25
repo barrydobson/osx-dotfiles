@@ -7,12 +7,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tomasr/molokai'
+Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
-Plug 'edkolev/promptline.vim'
-Plug 'edkolev/tmuxline.vim'
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
@@ -31,7 +29,8 @@ call plug#end()
 
 let mapleader = ","
 
-colorscheme molokai
+let base16colorspace=256
+colorscheme base16-google-dark
 
 " Enable hidden buffers
 set hidden
@@ -125,7 +124,7 @@ noremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 30, 4)<CR>
 
 " Lightline
 let g:lightline = {
-		\ 'colorscheme': 'molokai',
+		\ 'colorscheme': 'base16_google_dark',
 		\ 'active': {
 		\   'left': [ [ 'mode', 'paste' ],
 		\             [ 'fugitive', 'filename' ] ]
