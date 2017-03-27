@@ -1,6 +1,9 @@
 package aws
 package brew
-package nvm
+package config
+package foreign-env
+package https://github.com/decors/fish-colored-man
 package tab
+package tmux-zen
 theme clearance
 theme default

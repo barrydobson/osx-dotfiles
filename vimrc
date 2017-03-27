@@ -25,6 +25,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-smooth-scroll'
+
+Plug 'dag/vim-fish'
+
 call plug#end()
 
 let mapleader = ","
