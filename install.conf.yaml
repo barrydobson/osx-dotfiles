@@ -90,4 +90,5 @@
   - dockutil --add /Applications/zoom.us.app --after Slack
   - dockutil --add '/Applications/Google Play Music Desktop Player.app' --after zoom.us
   - dockutil --add '/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app' --after 'Google Play Music Desktop Player'
+  - pip install -U gsutil
   # - [bash -c 'git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts', Installing Powerline fonts]

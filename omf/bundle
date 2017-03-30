@@ -1,9 +1,8 @@
 package aws
 package brew
-package config
 package foreign-env
 package https://github.com/decors/fish-colored-man
 package tab
-package tmux-zen
 theme clearance
 theme default
+theme git@github.com:mgoodness/theme-opsgoodness.git

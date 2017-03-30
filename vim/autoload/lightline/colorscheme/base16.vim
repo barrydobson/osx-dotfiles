@@ -1,5 +1,5 @@
 " =============================================================================
-" Filename: autoload/lightline/colorscheme/bright_cyan6_google_dark.vim
+" Filename: autoload/lightline/colorscheme/base16.vim
 " Author: mgoodness
 " License: MIT License
 " =============================================================================
@@ -26,20 +26,20 @@ if &background ==# 'light'
   let [s:bright_yellow, s:bright_blue] = [s:bright_blue, s:bright_yellow]
 endif
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-let s:p.normal.left = [ [ s:white, s:blue ], [ s:white, s:green ] ]
-let s:p.normal.right = [ [ s:black, s:blue ], [ s:black, s:green ] ]
+let s:p.normal.left = [ [ s:black, s:blue ], [ s:black, s:magenta] ]
+let s:p.normal.right = [ [ s:black, s:blue ], [ s:black, s:magenta ] ]
 let s:p.inactive.right = [ [ s:black, s:green ], [ s:yellow, s:black ] ]
 let s:p.inactive.left =  [ [ s:blue, s:black ], [ s:yellow, s:black ] ]
-let s:p.insert.left = [ [ s:white, s:green ], [ s:white, s:green ] ]
-let s:p.replace.left = [ [ s:white, s:red ], [ s:white, s:green ] ]
-let s:p.visual.left = [ [ s:white, s:yellow], [ s:white, s:green ] ]
-let s:p.normal.middle = [ [ s:cyan, s:black ] ]
+let s:p.insert.left = [ [ s:black, s:green ], [ s:black, s:magenta ] ]
+let s:p.replace.left = [ [ s:black, s:red ], [ s:black, s:magenta ] ]
+let s:p.visual.left = [ [ s:black, s:yellow], [ s:black, s:magenta ] ]
+let s:p.normal.middle = [ [ s:blue, s:black ] ]
 let s:p.inactive.middle = [ [ s:blue, s:black ] ]
-let s:p.tabline.left = [ [ s:white, s:green ] ]
+let s:p.tabline.left = [ [ s:black, s:green ] ]
 let s:p.tabline.tabsel = [ [ s:white, s:black ] ]
 let s:p.tabline.middle = [ [ s:green, s:white ] ]
 let s:p.tabline.right = copy(s:p.normal.right)
-let s:p.normal.error = [ [ s:white, s:red ] ]
+let s:p.normal.error = [ [ s:black, s:red ] ]
 let s:p.normal.warning = [ [ s:black, s:yellow ] ]
 
-let g:lightline#colorscheme#base16_google_dark#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#base16#palette = lightline#colorscheme#flatten(s:p)

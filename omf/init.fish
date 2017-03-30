@@ -1,6 +1,6 @@
 # Base16 shell colors
 if status --is-interactive
-  eval sh $HOME/.config/base16-shell/scripts/base16-google-dark.sh
+  eval sh $HOME/.config/base16-shell/scripts/base16-summerfruit-dark.sh
 end
 
 # Git aliases
@@ -13,7 +13,6 @@ alias gcm 'git checkout master'
 alias gfa 'git fetch --all --prune'
 alias glog 'git log --color --decorate --graph --oneline'
 alias glstat 'git log --color --decorate --stat'
-alias gpdo 'git push --delete origin'
 alias gpf 'git push --force'
 alias gradd 'git remote add'
 alias grba 'git rebase --abort'

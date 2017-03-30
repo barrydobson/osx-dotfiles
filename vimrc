@@ -26,14 +26,14 @@ Plug 'junegunn/fzf'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-smooth-scroll'
 
-Plug 'dag/vim-fish'
+" Plug 'dag/vim-fish'
 
 call plug#end()
 
 let mapleader = ","
 
 let base16colorspace=256
-colorscheme base16-google-dark
+colorscheme base16-summerfruit-dark
 
 " Enable hidden buffers
 set hidden
@@ -127,7 +127,7 @@ noremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 30, 4)<CR>
 
 " Lightline
 let g:lightline = {
-		\ 'colorscheme': 'base16_google_dark',
+		\ 'colorscheme': 'base16',
 		\ 'active': {
 		\   'left': [ [ 'mode', 'paste' ],
 		\             [ 'fugitive', 'filename' ] ]
