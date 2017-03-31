@@ -27,6 +27,8 @@ alias grum 'git rebase upstream/master'
 alias grup 'git remote update'
 alias gshow 'git show --decorate'
 alias gst 'git status --short --branch'
+alias gsta 'git stash'
+alias gstp 'git stash pop'
 
 # Misc aliases
 alias brewski 'brew update; and brew upgrade; brew cleanup; brew cask cleanup; brew doctor'
