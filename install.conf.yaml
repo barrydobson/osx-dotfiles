@@ -39,6 +39,7 @@
   - glide go godep govendor
   - gpg2
   - graphviz terraform
+  - highlight
   - hub
   - jq
   - lastpass-cli --with-pinentry

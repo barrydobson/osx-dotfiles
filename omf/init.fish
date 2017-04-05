@@ -44,6 +44,7 @@ alias vtm 'vim $HOME/tmux.conf'
 alias kube-drain 'kubectl drain --force --ignore-daemonsets --delete-local-data'
 alias kube-logs 'kubectl logs'
 alias kube-mon 'kubectl --namespace=monitoring'
+alias kube-port 'kubectl port-forward'
 alias kube-sys 'kubectl --namespace=kube-system'
 alias kubewatch 'watch kubectl'
 
@@ -70,3 +71,7 @@ set -g man_bold blue
 set -g man_standout -b white magenta
 set -g man_underline -u green
 
+# Less syntax highlighting
+set hilite (which highlight)
+set -gx LESSOPEN "| $hilite %s --out-format xterm256 --quiet --force "
+set -gx LESS " -R"
