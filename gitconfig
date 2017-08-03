@@ -22,3 +22,5 @@
   browser = open
 [diff]
   tool = vimdiff
+[credential]
+	helper = osxkeychain
