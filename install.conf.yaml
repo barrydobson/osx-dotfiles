@@ -14,7 +14,6 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
     ~/.ssh/config: ssh-config
-    ~/.tmux.conf: tmux.conf
     ~/.vim/autoload/lightline: vim/autoload/lightline
     ~/.vimrc: vimrc
 
@@ -49,12 +48,10 @@
   - python macvim --with-override-system-vim
   - openssl
   - prometheus
-  - reattach-to-user-namespace tmux
   - watch
   - wget
 
 - cask:
-  - atom
   - caffeine
   - cheatsheet
   - dash
@@ -66,6 +63,8 @@
   - keybase
   - slack
   - soundcleod
+  - visual-studio-code
+  - zoomus
 
 - shell:
   - [sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
@@ -98,6 +97,7 @@
   - dockutil --add /Applications/iTerm.app --after Finder
   - dockutil --add '/Applications/Google Chrome.app' --after iTerm
   - dockutil --add /Applications/Slack.app --after 'Google Chrome'
-  - dockutil --add /Applications/zoom.us.app --after Slack
+  - dockutil --add '/Applications/Microsoft Outlook.app' --after Slack
+  - dockutil --add /Applications/zoom.us.app --after 'Microsoft Outlook'
   - dockutil --add '/Applications/Google Play Music Desktop Player.app' --after zoom.us
   - dockutil --add '/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app' --after 'Google Play Music Desktop Player'
