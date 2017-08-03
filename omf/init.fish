@@ -32,6 +32,7 @@ alias gstp 'git stash pop'
 
 # Misc aliases
 alias brewski 'brew update; and brew upgrade; brew cleanup; brew cask cleanup; brew doctor'
+alias curl-trace 'curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean 'docker system prune --all'
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
@@ -41,11 +42,12 @@ alias vrc 'vim $HOME/.vimrc'
 alias vtm 'vim $HOME/tmux.conf'
 
 # Kubernetes aliases
-alias kube-drain 'kubectl drain --force --ignore-daemonsets --delete-local-data'
+alias kube-drain 'kubectl drain --timeout=5m --delete-local-data --force --ignore-daemonsets'
 alias kube-logs 'kubectl logs'
-alias kube-mon 'kubectl --namespace=monitoring'
 alias kube-port 'kubectl port-forward'
+alias kube-354 'kubectl --namespace=prd354'
 alias kube-sys 'kubectl --namespace=kube-system'
+alias kube-tec 'kubectl --namespace=tectonic-system'
 alias kubewatch 'watch kubectl'
 
 # Terraform aliases
@@ -57,7 +59,7 @@ set -gx VISUAL vim
 
 # Paths
 set -gx GOPATH $HOME/dev/go
-set -gx PATH $HOME/bin $PATH
+set -gx PATH $HOME/bin $GOPATH/bin $PATH
 set -gx PYTHONPATH /usr/local/lib/python2.7/site-packages $PYTHONPATH
 
 # FZF settings
