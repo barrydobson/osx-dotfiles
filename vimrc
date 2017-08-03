@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-sensible'
@@ -25,6 +24,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'ervandew/supertab'
 
 " Plug 'dag/vim-fish'
 
@@ -55,6 +55,9 @@ let &colorcolumn="80,".join(range(120,999),",")
 " Toggle paste
 set pastetoggle=<F2>
 
+" Use system clipboard
+set clipboard=unnamed
+
 " Display relative line numbers, except absolute current line number
 set relativenumber
 set number
@@ -71,12 +74,12 @@ set softtabstop=2
 
 " Save temporary/backup files in ~/.vim
 call system('mkdir -p ~/.vim/{backup,swap,undo}')
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
 
 " Keep undo history across sessions by storing it in a file.
 if has('persistent_undo')
-  set undodir=~/.vim/undo//
+  set undodir=~/.vim/undo/
   set undofile
   set undolevels=1000
   set undoreload=10000
@@ -99,6 +102,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" YAML tabs
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " vim-better-whitespace (https://github.com/ntpeters/vim-better-whitespace)
 autocmd BufEnter * EnableStripWhitespaceOnSave
