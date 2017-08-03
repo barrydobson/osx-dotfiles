@@ -1,3 +1,35 @@
+Host 10.188.* dev-k8s.us-east-1.nonprod-tmaws.io kubernauts-k8s.us-east-1.nonprod-tmaws.io
+  Identityfile ~/.ssh/cet-dev-east.pem
+
+Host 10.156.*
+  Identityfile ~/.ssh/cet-dev-west.pem
+
+Host 10.184.*
+  Identityfile ~/.ssh/cet-preprod-east.pem
+
+Host 10.152.*
+  Identityfile ~/.ssh/cet-preprod-west.pem
+
+Host 10.186.*
+  Identityfile ~/.ssh/cet-pci-east.pem
+
+Host 10.185.*
+  Identityfile ~/.ssh/cet-prod-east.pem
+
+Host 10.153.*
+  Identityfile ~/.ssh/cet-prod-west.pem
+
+Host 10.187.*
+  Identityfile ~/.ssh/cet-pci-east.pem
+
+Host 10.189.*
+  Identityfile ~/.ssh/cet-qa-east.pem
+
+Host 10.190.*
+  Identityfile ~/.ssh/cet-qa-east.pem
+
+Host gitlab.com
+  Identityfile ~/.ssh/gitlab.com
+
 Host *
-  AddKeysToAgent yes
   UseKeychain yes
