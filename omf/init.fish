@@ -1,3 +1,11 @@
+if test -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.fish.inc
+  source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.fish.inc
+end
+
+if test -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+  source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+end
+
 # Base16 shell colors
 if status --is-interactive
   eval sh $HOME/.config/base16-shell/scripts/base16-summerfruit-dark.sh
@@ -10,7 +18,7 @@ alias gbr 'git branch --remote'
 alias gca 'git commit --all --gpg-sign --verbose'
 alias gca! 'git commit --all --gpg-sign --amend --verbose'
 alias gcm 'git checkout master'
-alias gfa 'git fetch --all --prune'
+alias gfa 'git fetch --all --tags --prune'
 alias glog 'git log --color --decorate --graph --oneline'
 alias glstat 'git log --color --decorate --stat'
 alias gpf 'git push --force'
@@ -36,6 +44,7 @@ alias curl-trace 'curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean 'docker system prune --all'
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
+alias tmpass 'pass Ticketmaster/techops -c'
 alias vfish 'vim $HOME/.config/omf/init.fish; and omf reload'
 alias vinstall 'vim $HOME/dotfiles/install.conf.yaml'
 alias vrc 'vim $HOME/.vimrc'
