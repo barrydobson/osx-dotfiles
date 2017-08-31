@@ -1,3 +1,6 @@
+Host 10.212.*
+  Identityfile ~/.ssh/kubernauts-nonprod-east.pem
+
 Host 10.188.* dev-k8s.us-east-1.nonprod-tmaws.io kubernauts-k8s.us-east-1.nonprod-tmaws.io
   Identityfile ~/.ssh/cet-dev-east.pem
 
@@ -33,3 +36,13 @@ Host gitlab.com
 
 Host *
   UseKeychain yes
+
+# Added by Kryptonite
+Host *
+  PKCS11Provider /usr/local/lib/kr-pkcs11.so
+  ProxyCommand /usr/local/bin/krssh %h %p
+  IdentityFile ~/.ssh/id_kryptonite
+  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_ecdsa
+  IdentityFile ~/.ssh/id_dsa
