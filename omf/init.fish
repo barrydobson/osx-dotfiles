@@ -44,11 +44,11 @@ alias curl-trace 'curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean 'docker system prune --all'
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
+alias helm-354 'helm --tiller-namespace=prd354'
 alias tmpass 'pass Ticketmaster/techops -c'
-alias vfish 'vim $HOME/.config/omf/init.fish; and omf reload'
-alias vinstall 'vim $HOME/dotfiles/install.conf.yaml'
-alias vrc 'vim $HOME/.vimrc'
-alias vtm 'vim $HOME/tmux.conf'
+alias vfish 'nvim $HOME/.config/omf/init.fish; and omf reload'
+alias vinstall 'nvim $HOME/dotfiles/install.conf.yaml'
+alias vrc 'nvim $HOME/.config/nvim/init.vim'
 
 # Kubernetes aliases
 alias kube-drain 'kubectl drain --timeout=5m --delete-local-data --force --ignore-daemonsets'
@@ -63,8 +63,8 @@ alias kubewatch 'watch kubectl'
 alias tfgp 'terraform get --update; and terraform plan'
 
 # Editor settings
-set -gx EDITOR vim
-set -gx VISUAL vim
+set -gx EDITOR nvim
+set -gx VISUAL nvim
 
 # Paths
 set -gx GOPATH $HOME/dev/go

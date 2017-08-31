@@ -1,12 +1,12 @@
 " vim-plug (https://github.com/junegunn/vim-plug)
 " Automatically install vim-plug and run PlugInstall if vim-plug not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
@@ -26,8 +26,8 @@ Plug 'matze/vim-move'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'ervandew/supertab'
 
+Plug 'hashivim/vim-terraform'
 " Plug 'dag/vim-fish'
-
 call plug#end()
 
 let mapleader = ","
@@ -72,14 +72,11 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" Save temporary/backup files in ~/.vim
-call system('mkdir -p ~/.vim/{backup,swap,undo}')
-set backupdir=~/.vim/backup/
-set directory=~/.vim/swap/
+" Create persistence directories
+call system('mkdir -p ~/.local/share/nvim/{backup,swap,undo}')
 
 " Keep undo history across sessions by storing it in a file.
 if has('persistent_undo')
-  set undodir=~/.vim/undo/
   set undofile
   set undolevels=1000
   set undoreload=10000
@@ -133,20 +130,20 @@ noremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 30, 4)<CR>
 
 " Lightline
 let g:lightline = {
-		\ 'colorscheme': 'base16',
-		\ 'active': {
-		\   'left': [ [ 'mode', 'paste' ],
-		\             [ 'fugitive', 'filename' ] ]
-		\ },
-		\ 'component_function': {
-		\   'fugitive': 'LightlineFugitive',
-		\   'readonly': 'LightlineReadonly',
-		\   'modified': 'LightlineModified',
-		\   'filename': 'LightlineFilename'
-		\ },
-		\ 'separator': { 'left': '', 'right': '' },
-		\ 'subseparator': { 'left': '', 'right': '' }
-		\ }
+    \ 'colorscheme': 'base16',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'fugitive', 'filename' ] ]
+    \ },
+    \ 'component_function': {
+    \   'fugitive': 'LightlineFugitive',
+    \   'readonly': 'LightlineReadonly',
+    \   'modified': 'LightlineModified',
+    \   'filename': 'LightlineFilename'
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \ }
 
 function! LightlineModified()
   if &filetype == "help"
@@ -180,6 +177,6 @@ endfunction
 
 function! LightlineFilename()
   return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-				\ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-				\ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+        \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
 endfunction

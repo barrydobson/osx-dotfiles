@@ -9,21 +9,24 @@
 
 - link:
     ~/.config/base16-shell: base16-shell
+    ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/omf: omf
     ~/.curl-format.txt: curl-format.txt
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
+    ~/.local/share/nvim/site/autoload: nvim/autoload
     ~/.ssh/config: ssh-config
-    ~/.vim/autoload/lightline: vim/autoload/lightline
-    ~/.vimrc: vimrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
 - tap:
   - beeftornado/rmtree
+  - boz/repo
+  - c-bata/kube-prompt
   - caskroom/versions
   - homebrew/versions
+  - kryptco/tap
   - vitorgalvao/tiny-scripts
 
 - brew:
@@ -33,7 +36,7 @@
   - cask-repair
   - cfssl
   - dockutil
-  - etcd kubernetes-helm kubernetes-cli stern
+  - etcd jsonnet kail kube-prompt kubernetes-cli kubernetes-helm stern
   - fzf the_silver_searcher
   - git
   - glide go godep govendor
@@ -43,11 +46,15 @@
   - hub
   - hugo
   - jq
-  - lastpass-cli --with-pinentry
+  - kr
   - lnav
-  - python macvim --with-override-system-vim
+  - mas
+  - pass
+  - neovim python
   - openssl
   - prometheus
+  - tree
+  - vegeta
   - watch
   - wget
 
@@ -57,6 +64,7 @@
   - dash
   - docker minikube virtualbox
   - google-chrome
+  - google-cloud-sdk
   - google-play-music-desktop-player
   - iterm2
   - java
@@ -71,8 +79,8 @@
   - [sh -c 'grep -q $(brew --prefix)/bin/fish /etc/shells || echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
   - [chsh -s $(brew --prefix)/bin/fish, Setting fish as shell]
   - helm init --client-only
-  - pip2 install -U gsutil
   - go get -v github.com/bronze1man/yaml2json
+  - pip2 install --user neovim
   # - [bash -c 'git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts', Installing Powerline fonts]
 
 - shell:
@@ -100,4 +108,3 @@
   - dockutil --add '/Applications/Microsoft Outlook.app' --after Slack
   - dockutil --add /Applications/zoom.us.app --after 'Microsoft Outlook'
   - dockutil --add '/Applications/Google Play Music Desktop Player.app' --after zoom.us
-  - dockutil --add '/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app' --after 'Google Play Music Desktop Player'
