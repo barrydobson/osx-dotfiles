@@ -27,7 +27,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'ervandew/supertab'
 
 Plug 'hashivim/vim-terraform'
-" Plug 'dag/vim-fish'
+Plug 'dag/vim-fish'
 call plug#end()
 
 let mapleader = ","
