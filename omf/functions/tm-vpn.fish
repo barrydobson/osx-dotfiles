@@ -9,8 +9,8 @@ function tm-vpn --description 'Connects/disconnects Ticketmaster VPN' --argument
   set -l anyconnect_path "/opt/cisco/anyconnect/bin/vpn"
 
   if string match -i -q "connect" $command
-    echo -e $connect_string | $anyconnect_patH -s connect ravpn.livenation.com
+    echo -e $connect_string | eval $anyconnect_path -s connect ravpn.livenation.com
   else if string match -i -q "disconnect" $command
-    $anyconnect_path disconnect
+    eval $anyconnect_path disconnect
   end
 end
