@@ -26,7 +26,6 @@
   - c-bata/kube-prompt
   - caskroom/versions
   - homebrew/versions
-  - kryptco/tap
   - vitorgalvao/tiny-scripts
 
 - brew:
@@ -46,11 +45,10 @@
   - hub
   - hugo
   - jq
-  - kr
   - lnav
   - mas
   - pass
-  - neovim python
+  - neovim python python3 ruby
   - openssl
   - prometheus
   - tree
@@ -81,6 +79,8 @@
   - helm init --client-only
   - go get -v github.com/bronze1man/yaml2json
   - pip2 install --user neovim
+  - pip3 install --user neovim
+  - gem install neovim
   # - [bash -c 'git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts', Installing Powerline fonts]
 
 - shell:

@@ -28,7 +28,7 @@ alias grbc 'git rebase --continue'
 alias grbi 'git rebase --interactive'
 alias grh 'git reset HEAD'
 alias grhh 'git reset HEAD --hard'
-alias grpm 'git rebase --preserve-merges master'
+alias grpm 'git-rebase-preserve-author master'
 alias grset 'git remote set-url'
 alias glum 'git pull upstream master'
 alias grum 'git rebase upstream/master'
@@ -44,7 +44,6 @@ alias curl-trace 'curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean 'docker system prune --all'
 alias fixbt 'sudo killall coreaudiod'
 alias flushdns 'sudo killall -HUP mDNSResponder'
-alias helm-354 'helm --tiller-namespace=prd354'
 alias tmpass 'pass Ticketmaster/techops -c'
 alias vfish 'nvim $HOME/.config/omf/init.fish; and omf reload'
 alias vinstall 'nvim $HOME/dotfiles/install.conf.yaml'
@@ -69,7 +68,7 @@ set -gx VISUAL nvim
 # Paths
 set -gx GOPATH $HOME/dev/go
 set -gx PATH $HOME/bin $GOPATH/bin $PATH
-set -gx PYTHONPATH /usr/local/lib/python2.7/site-packages $PYTHONPATH
+set -gx PYTHONPATH /usr/local/lib/python2.7/site-packages /usr/local/lib/python3.6/site-packages $PYTHONPATH
 
 # FZF settings
 set -gx FZF_COMPLETION_TRIGGER ""
