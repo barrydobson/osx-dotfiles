@@ -7,10 +7,10 @@ function git-rebase-preserve-author -d 'Rebase preserving original author' -a br
     set -l git_author_string (git show -s --format='%an <%ae>' $stopped_sha)
 
     for c in (git diff --name-only --diff-filter=U)
-      nvim $root_dir/$c
+      eval $EDITOR $root_dir/$c
     end
 
-    eval $EDITOR --author=$git_author_string
+    gca --author=$git_author_string
     grbc
   end
 end
