@@ -1,4 +1,4 @@
-function count-ingress
+function ingress-count
   for namespace in (kubectl get ns -o name | cut -d/ -f2)
     set -l product_name (kubectl get ns $namespace -o json | jq -r '.metadata.annotations."ticketmaster.com/name"')
     set -l tech_owners (kubectl get ns $namespace -o json | jq -r '.metadata.annotations."ticketmaster.com/tech-owner"')
