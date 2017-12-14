@@ -2,6 +2,7 @@ package aws
 package brew
 package foreign-env
 package https://github.com/decors/fish-colored-man
+package hub
 package tab
 theme clearance
 theme default
