@@ -51,7 +51,6 @@ alias vinstall 'nvim $HOME/dotfiles/install.conf.yaml'
 alias vrc 'nvim $HOME/.config/nvim/init.vim'
 
 # Kubernetes aliases
-alias kube-drain 'kubectl drain --timeout=5m --delete-local-data --force --ignore-daemonsets'
 alias kube-logs 'kubectl logs'
 alias kube-port 'kubectl port-forward'
 alias kube-354 'kubectl --namespace=prd354'
