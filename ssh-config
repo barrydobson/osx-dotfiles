@@ -1,35 +1,77 @@
-Host 10.212.*
+# nonprod3/sandbox3
+Host 10.132.*
   Identityfile ~/.ssh/kubernauts-nonprod-east.pem
 
-Host 10.188.* dev-k8s.us-east-1.nonprod-tmaws.io kubernauts-k8s.us-east-1.nonprod-tmaws.io
-  Identityfile ~/.ssh/cet-dev-east.pem
+# nonprod4
+Host 10.20.*
+  Identityfile ~/.ssh/kubernauts-nonprod-west.pem
 
-Host 10.156.*
-  Identityfile ~/.ssh/cet-dev-west.pem
+# preprod3
+Host 10.133.*
+  Identityfile ~/.ssh/kubernauts-preprod-east.pem
 
-Host 10.184.*
-  Identityfile ~/.ssh/cet-preprod-east.pem
+# preprod4
+Host 10.21.*
+  Identityfile ~/.ssh/kubernauts-preprod-west.pem
 
-Host 10.152.*
-  Identityfile ~/.ssh/cet-preprod-west.pem
+# preprodpci3
+Host 10.134.*
+  Identityfile ~/.ssh/kubernauts-preprodpci-east.pem
 
-Host 10.186.*
-  Identityfile ~/.ssh/cet-pci-east.pem
+# preprodpci4
+Host 10.22.*
+  Identityfile ~/.ssh/kubernauts-preprodpci-west.pem
 
-Host 10.185.*
-  Identityfile ~/.ssh/cet-prod-east.pem
+# prod3
+Host 10.135.*
+  Identityfile ~/.ssh/kubernauts-prod-east.pem
 
-Host 10.153.*
-  Identityfile ~/.ssh/cet-prod-west.pem
+# prod4
+Host 10.23.*
+  Identityfile ~/.ssh/kubernauts-prod-west.pem
 
-Host 10.187.*
-  Identityfile ~/.ssh/cet-pci-east.pem
+# prodpci3
+Host 10.136.*
+  Identityfile ~/.ssh/kubernauts-prodpci-east.pem
 
-Host 10.189.*
-  Identityfile ~/.ssh/cet-qa-east.pem
+# prodpci4
+Host 10.24.*
+  Identityfile ~/.ssh/kubernauts-prodpci-west.pem
 
-Host 10.190.*
-  Identityfile ~/.ssh/cet-qa-east.pem
+
+
+Host 10.172.64.* 10.172.65.* 10.172.66.* 10.172.67.* 10.172.68.* 10.172.69.* 10.172.70.* 10.172.71.*
+  Identityfile ~/.ssh/kubernauts-nonprod-west.pem
+
+Host 10.172.72.* 10.172.73.* 10.172.74.* 10.172.75.* 10.172.76.* 10.172.77.* 10.172.78.* 10.172.79.*
+  Identityfile ~/.ssh/kubernauts-preprod-west.pem
+
+Host 10.172.80.* 10.172.81.* 10.172.82.* 10.172.83.* 10.172.84.* 10.172.85.* 10.172.86.* 10.172.87.*
+  Identityfile ~/.ssh/kubernauts-preprodpci-west.pem
+
+Host 10.172.88.* 10.172.89.* 10.172.90.* 10.172.91.* 10.172.92.* 10.172.93.* 10.172.94.* 10.172.95.*
+  Identityfile ~/.ssh/kubernauts-prod-west.pem
+
+Host 10.172.96.* 10.172.97.* 10.172.98.* 10.172.99.* 10.172.100.* 10.172.101.* 10.172.102.* 10.172.103.*
+  Identityfile ~/.ssh/kubernauts-prodpci-west.pem
+
+Host 10.212.64.* 10.212.65.* 10.212.66.* 10.212.67.* 10.212.68.* 10.212.69.* 10.212.70.* 10.212.71.*
+  Identityfile ~/.ssh/kubernauts-nonprod-east.pem
+
+Host 10.212.72.* 10.212.73.* 10.212.74.* 10.212.75.* 10.212.76.* 10.212.77.* 10.212.78.* 10.212.79.*
+  Identityfile ~/.ssh/kubernauts-preprod-east.pem
+
+Host 10.212.80.* 10.212.81.* 10.212.82.* 10.212.83.* 10.212.84.* 10.212.85.* 10.212.86.* 10.212.87.*
+  Identityfile ~/.ssh/kubernauts-preprodpci-east.pem
+
+Host 10.212.88.* 10.212.89.* 10.212.90.* 10.212.91.* 10.212.92.* 10.212.93.* 10.212.94.* 10.212.95.*
+  Identityfile ~/.ssh/kubernauts-prod-east.pem
+
+Host 10.212.88.* 10.212.89.* 10.212.90.* 10.212.91.* 10.212.92.* 10.212.93.* 10.212.94.* 10.212.95.*
+  Identityfile ~/.ssh/kubernauts-prod-east.pem
+
+Host 10.212.96.* 10.212.97.* 10.212.98.* 10.212.99.* 10.212.100.* 10.212.101.* 10.212.102.* 10.212.103.*
+  Identityfile ~/.ssh/kubernauts-prodpci-east.pem
 
 Host *
   UseKeychain yes
