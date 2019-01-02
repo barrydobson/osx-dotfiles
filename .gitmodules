@@ -7,9 +7,6 @@
 [submodule "dotbot-brew"]
   path = dotbot-brew
   url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "base16-shell"]
-  path = base16-shell
-  url = git@github.com:chriskempson/base16-shell.git
 [submodule "omf/themes/opsgoodness"]
   path = omf/themes/opsgoodness
   url = git@github.com:mgoodness/theme-opsgoodness.git
