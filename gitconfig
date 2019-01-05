@@ -8,14 +8,15 @@
   autocrlf = input
   excludesfile = ~/.gitignore
   trustctime = false
+  editor = code --wait
 [pull]
   rebase = preserve
 [push]
   default = upstream
 [user]
-  email = mgoodness@gmail.com
   name = Michael Goodness
-  signingkey = EA8E12FD
+  signingkey = 7B16E1FBEA8E12FD
+  useConfigOnly = true
 [hub]
   protocol = ssh
 [web]
@@ -24,13 +25,15 @@
   helper = osxkeychain
 [tag]
   forcesignannotated = true
-[merge]
-  tool = vimdiff
-[mergetool]
-  prompt = true
-[mergetool "vimdiff"]
-  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-[difftool]
-  prompt = false
 [diff]
-  tool = vimdiff
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@git.tmaws.io:"]
+	insteadOf = https://git.tmaws.io/
