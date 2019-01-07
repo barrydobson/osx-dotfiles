@@ -20,7 +20,9 @@ zplug "sindresorhus/pure", use:"pure.zsh", as:theme
 
 zplug "plugins/docker", from:oh-my-zsh, if:"(( $+commands[docker] ))"
 
+zplug "mgoodness/02bd0e0543daef8f81a4411c4394ab28", from:gist, use:"docker-rmi.sh"
 zplug "mgoodness/600f9c9da8679cca98732dbf8a6c4411", from:gist, use:"find-replace.sh"
 zplug "mgoodness/3998eb4aab8ca01a6b5468f76586f48f", from:gist, use:"k8s-api.sh"
+zplug "mgoodness/c0b0f887c962ef050d5411efb3befc9a", from:gist, use:"kube-context.sh"
 zplug "mgoodness/3f99876a9422525b23725061ba83c517", from:gist, \
   if:"(( $+commands[git] ))", use:"git-rebase-preserve-author.sh"

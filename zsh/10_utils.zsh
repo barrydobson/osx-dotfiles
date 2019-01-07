@@ -1,11 +1,3 @@
-# reload resets Completion function
-reload() {
-  local f
-  f=(~/.zsh/Completion/*(.))
-  unfunction $f:t 2>/dev/null
-  autoload -U $f:t
-}
-
 # ostype returns the lowercase OS name
 ostype() {
   echo ${(L):-$(uname)}
@@ -25,7 +17,7 @@ os_detect() {
 # is_osx returns true if running OS is Macintosh
 is_osx() {
   os_detect
-  if [[ $PLATFORM == "osx" ]]; then
+  if [[ "${PLATFORM}" == "osx" ]]; then
     return 0
   else
     return 1
@@ -36,7 +28,7 @@ alias is_mac=is_osx
 # is_linux returns true if running OS is GNU/Linux
 is_linux() {
   os_detect
-  if [[ $PLATFORM == "linux" ]]; then
+  if [[ "${PLATFORM}" == "linux" ]]; then
     return 0
   else
     return 1
@@ -46,19 +38,9 @@ is_linux() {
 # is_bsd returns true if running OS is FreeBSD
 is_bsd() {
   os_detect
-  if [[ $PLATFORM == "bsd" ]]; then
+  if [[ "${PLATFORM}" == "bsd" ]]; then
     return 0
   else
     return 1
   fi
-}
-
-# get_os returns OS name of the platform that is running
-get_os() {
-  local os
-  for os in osx linux bsd; do
-    if is_$os; then
-      echo $os
-    fi
-  done
 }

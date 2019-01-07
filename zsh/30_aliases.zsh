@@ -51,7 +51,7 @@ if (( $+commands[git] )); then
 fi
 
 if is_osx; then
-  alias brewski='brew update && brew upgrade; brew cleanup; brew doctor'
+  alias brewski='brew update && brew upgrade && brew cleanup && brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
 fi
@@ -59,6 +59,7 @@ fi
 if (( $+commands[kubectl] )); then
   alias k214='kubectl --namespace=prd214'
   alias k354='kubectl --namespace=prd354'
+  alias kc=kube-context
   alias klogs='kubectl logs'
   alias kport='kubectl port-forward'
   alias ksys='kubectl --namespace=kube-system'
@@ -66,7 +67,6 @@ if (( $+commands[kubectl] )); then
   alias kwatch='watch kubectl'
 
   abbrev-alias -g k=kubectl
-  # abbrev-alias -g kc kube-context
   abbrev-alias -g kn='kubectl -n'
 fi
 

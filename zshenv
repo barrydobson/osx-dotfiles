@@ -9,9 +9,6 @@ path=( \
 # NOTE: set fpath before compinit
 typeset -gx -U fpath
 fpath=( \
-  ~/.zsh/Completion(N-/) \
-  ~/.zsh/functions(N-/) \
-  ~/.zsh/plugins/zsh-completions(N-/) \
   /usr/local/share/zsh/site-functions(N-/) \
   $fpath \
 )
@@ -70,6 +67,7 @@ export PATH="${GOBIN}:${PATH}"
 export CORRECT_IGNORE='_*'
 export CORRECT_IGNORE_FILE='.*'
 
+# Treat these characters as part of a word
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 export FZF_DEFAULT_OPTS="--ansi --color=16 --height=40% --reverse"
@@ -89,5 +87,3 @@ if [[ ${UID} == 0 ]]; then
 fi
 
 export KUBECONFIG="${HOME}/.kube/config:${HOME}/Downloads/admin.conf"
-
-# export DOTPATH=${0:A:h}
