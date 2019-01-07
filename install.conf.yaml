@@ -1,3 +1,5 @@
+# https://github.com/anishathalye/dotbot
+
 - clean: ['~']
 
 - defaults:
@@ -8,14 +10,13 @@
       relink: true
 
 - link:
-    ~/.config/base16-shell: base16-shell
-    ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/omf: omf
     ~/.curl-format.txt: curl-format.txt
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
-    ~/.local/share/nvim/site/autoload: nvim/autoload
     ~/.ssh/config: ssh-config
+    ~/.zsh: zsh
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
@@ -23,63 +24,58 @@
 - tap:
   - beeftornado/rmtree
   - caskroom/versions
-  - homebrew/versions
+  - dtan4/tools
+  - tm/homebrew
   - vitorgalvao/tiny-scripts
+  - wata727/tflint
 
 - brew:
+  - argocd kubernetes-cli kubernetes-helm kustomize stern
   - awscli
-  - bash fish
+  - bash zsh
   - brew-cask-completion
   - cask-repair
-  # - cfssl
+  - cfssl openssl
+  - tm/homebrew/console
+  - curl wget
+  - dep glide go protobuf
   - dockutil
-  - ksonnet/tap/ks kubernetes-cli kubernetes-helm stern
-  - fzf the_silver_searcher
-  - git hub
+  - exa fzf the_silver_searcher
+  - ghrls git git-fresh hub
   - gnu-tar
-  - dep glide go
-  - gpg2
-  - graphviz terraform
-  - highlight
+  - gnupg
+  - graphviz terraform tflint
+  - highlight less
   - hugo
   - jq
   - lastpass-cli
   - mas
-  - neovim python python3 ruby
-  - openssl
-  - tree
   - watch
-  - wget
 
 - cask:
   - caffeine
-  - docker-edge
+  - docker
   - google-chrome
-  - google-cloud-sdk
-  - google-play-music-desktop-player
+#   - google-cloud-sdk
   - iterm2
   - java
   - keybase
   - lastpass
+#   - minikube
   - slack
   - visual-studio-code
   - zoomus
 
 - shell:
   - [sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells', Adding bash shell]
-  - [sh -c 'grep -q $(brew --prefix)/bin/fish /etc/shells || echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells', Adding fish shell]
-  - [chsh -s $(brew --prefix)/bin/fish, Setting fish as shell]
+  - [sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells', Adding zsh shell]
+#   - [chsh -s $(brew --prefix)/bin/zsh, Setting zsh as shell]
   - helm init --client-only
-  - go get -u -v github.com/pschultz/yaml2json
-  - go get -u github.com/derekparker/delve/cmd/dlv
-  - pip2 install --user neovim
-  - pip3 install --user neovim
-  - gem install neovim
-  # - [bash -c 'git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts', Installing Powerline fonts]
 
 - shell:
-  # Xcode
-  - mas install 497799835
+  - [sh -c 'mas install 497799835', Installing Xcode]
+  - [sh -c 'mas install 926036361', Installing LastPass]
+  - mas outdated && mas upgrade
 
 - shell:
   - dockutil --remove Safari
@@ -102,4 +98,3 @@
   - dockutil --add /Applications/Slack.app --after 'Google Chrome'
   - dockutil --add '/Applications/Microsoft Outlook.app' --after Slack
   - dockutil --add /Applications/zoom.us.app --after 'Microsoft Outlook'
-  - dockutil --add '/Applications/Google Play Music Desktop Player.app' --after zoom.us
