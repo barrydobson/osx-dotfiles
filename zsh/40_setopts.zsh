@@ -49,34 +49,6 @@ setopt mark_dirs
 # Notify when mail arrives
 setopt mail_warning
 
-# Don't record command to history if duplicate of previous
-setopt hist_ignore_dups
-# Don't record any duplicate commands to history
-setopt hist_ignore_all_dups
-setopt hist_save_nodups
-# Expire duplicate command first when trimming history
-setopt hist_expire_dups_first
-# Don't display duplicates when searching
-setopt hist_find_no_dups
-# Shere history
-setopt share_history
-# Remove extra blanks when adding to history
-setopt hist_reduce_blanks
-# Write to history immediately
-setopt inc_append_history
-# Remove history commands from history
-setopt hist_no_store
-# Remove functions from history
-setopt hist_no_functions
-# Record start and end time to history
-setopt extended_history
-# Remove commands with leading space from history
-setopt hist_ignore_space
-# Append instead of replace history
-setopt append_history
-# Expand history and reload the line
-setopt hist_verify
-
 # Automatically change to given directory
 setopt auto_cd
 

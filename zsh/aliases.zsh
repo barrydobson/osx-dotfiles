@@ -1,7 +1,11 @@
-unalias run-help
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 alias help=run-help
 
 if (( $+commands[git] )); then
+  alias finishpr='git pull upstream master && git push && git-fresh -f'
   alias gaa='git add --all'
   alias gba='git branch --all'
   alias gbr='git branch --remote'
@@ -44,13 +48,19 @@ if (( $+commands[git] )); then
   abbrev-alias -g gm='git merge'
   abbrev-alias -g gp='git push'
   abbrev-alias -g gpdo='git push --delete origin'
-  abbrev-alias -g gpr='git pull-request'
   abbrev-alias -g gpsu='git push --set-upstream'
+  abbrev-alias -g gpsuo='git push --set-upstream origin'
   abbrev-alias -g grp=git-rebase-preserve-author
   abbrev-alias -g grrm='git remote remove'
+
+  if (( $+commands[hub] )); then
+    alias git=hub
+
+    abbrev-alias -g gpr='git pull-request'
+  fi
 fi
 
-if is_osx; then
+if [[ "$(uname)" == "Darwin" ]]; then
   alias brewski='brew update && brew upgrade && brew cleanup && brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
