@@ -40,7 +40,7 @@
   - curl wget
   - dep glide go protobuf
   - dockutil
-  - exa fzf the_silver_searcher
+  - exa fasd fzf the_silver_searcher
   - ghrls git git-fresh hub
   - gnu-tar
   - gnupg
