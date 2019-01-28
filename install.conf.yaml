@@ -30,6 +30,7 @@
   - wata727/tflint
 
 - brew:
+  - getantibody/tap/antibody
   - argocd kubernetes-cli kubernetes-helm kustomize stern
   - awscli
   - bash zsh
@@ -40,7 +41,7 @@
   - curl wget
   - dep glide go protobuf
   - dockutil
-  - exa fasd fzf the_silver_searcher
+  - exa fasd fd fzf the_silver_searcher
   - ghrls git git-fresh hub
   - gnu-tar
   - gnupg
