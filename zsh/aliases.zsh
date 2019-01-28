@@ -1,7 +1,10 @@
+#!/usr/bin/env zsh
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+autoload -Uz run-help
 alias help=run-help
 
 if (( $+commands[git] )); then
@@ -72,6 +75,7 @@ if (( $+commands[kubectl] )); then
   alias kc=kube-context
   alias klogs='kubectl logs'
   alias kport='kubectl port-forward'
+  alias kssh=kube-ssh
   alias ksys='kubectl --namespace=kube-system'
   alias ktec='kubectl --namespace=tectonic-system'
   alias kwatch='watch kubectl'
@@ -95,6 +99,7 @@ alias cdgo='cd $GOPATH'
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean='docker system prune --all'
 alias less='less --force --no-init --hilite-search --ignore-case --SILENT --status-column --underline-special'
+alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
 alias tfgp='terraform get --update && terraform plan'
 
 abbrev-alias -g helm354='helm --tiller-namespace=prd354'

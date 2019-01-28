@@ -1,7 +1,4 @@
-# Spell-check commands
-setopt correct
-# Spell-check all arguments
-setopt correct_all
+#!/usr/bin/env zsh
 
 # Sort brace expansions
 setopt brace_ccl
@@ -26,9 +23,6 @@ setopt equals
 # Search paths even if they include slashes
 setopt path_dirs
 
-# Output exit status except zero
-setopt print_exit_value
-
 # Confirm when executing 'rm *'
 setopt rm_star_wait
 
@@ -52,14 +46,10 @@ setopt mail_warning
 # Automatically change to given directory
 setopt auto_cd
 
-# Automatically use menu completion
-setopt auto_menu
-
 setopt auto_param_keys
 setopt auto_param_slash
 
 setopt auto_pushd
-setopt complete_in_word
 setopt globdots
 setopt interactive_comments
 setopt list_types

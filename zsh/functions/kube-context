@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CONTEXTS=$(kubectl config get-contexts --no-headers -o name)
+
+[[ -n "$1" ]] && fzf_query="--query=$1"
+
+context=$(echo ${CONTEXTS} \
+  | fzf --no-multi ${fzf_query} \
+  | awk '{if ($1!="*") print $1; else print $2 }')
+
+[[ -n "${context}" ]] && kubectl config use-context "${context}"
