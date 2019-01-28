@@ -1,9 +1,0 @@
-package aws
-package brew
-package foreign-env
-package https://github.com/decors/fish-colored-man
-package hub
-package tab
-theme clearance
-theme default
-theme git@github.com:mgoodness/theme-opsgoodness.git
