@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+dest="${GOPATH}/src/$(echo "$1" | sed 's|^git@\(.*\):\(.*\)\.git|\1/\2|')"
+
+if [[ ! -d "${dest}" ]]; then
+  git clone "$1" "${dest}"
+fi
+
+cd ~/dev && ln -sf "${dest}"
+
+cd "${dest}"

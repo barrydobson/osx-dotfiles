@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ -n "$1" ]]; then
+  git checkout master
+
+  if [[ $(git remote show | grep upstream) ]]; then
+    git pull upstream master
+    git push origin master
+  else
+    git pull
+  fi
+
+  git push --delete origin "$1"
+  git branch --delete --force "$1"
+fi

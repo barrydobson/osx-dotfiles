@@ -9,13 +9,15 @@
   excludesfile = ~/.gitignore
   trustctime = false
   editor = code --wait
+[fetch]
+  prune = true
 [pull]
   rebase = preserve
 [push]
   default = upstream
 [user]
   name = Michael Goodness
-  signingkey = 7B16E1FBEA8E12FD
+  signingkey = 7C9D28EFD15FEAD2
   useConfigOnly = true
 [hub]
   protocol = ssh
@@ -37,3 +39,5 @@
 	insteadOf = https://github.com/
 [url "git@git.tmaws.io:"]
 	insteadOf = https://git.tmaws.io/
+[gpg]
+	program = /usr/local/bin/gpg

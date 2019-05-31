@@ -3,31 +3,50 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias dev='cd ~/dev'
 
 autoload -Uz run-help
 alias help=run-help
 
 if (( $+commands[git] )); then
-  alias finishpr='git pull upstream master && git push && git-fresh -f'
+  alias ga='git add'
   alias gaa='git add --all'
+  alias gap='git add --patch'
+  alias gb='git branch'
   alias gba='git branch --all'
+  alias gbd='git branch --delete'
+  alias gbdf='git branch --delete --force'
   alias gbr='git branch --remote'
-  alias gca='git commit --all --gpg-sign --verbose'
-  alias gca!='git commit --all --gpg-sign --amend --verbose'
+  alias gbu='git branch --unset-upstream'
+  alias gc='git commit --gpg-sign --signoff --verbose'
+  alias gc!='git commit --amend --gpg-sign --signoff --verbose'
+  alias gca='git commit --all --gpg-sign --signoff --verbose'
+  alias gca!='git commit --all --gpg-sign --amend --signoff --verbose'
   alias gcm='git checkout master'
+  alias gco='git checkout'
   alias gcp='git cherry-pick'
+  alias gd='git diff'
   alias gdm='git diff master'
   alias gfa='git fetch --all --tags --prune'
+  alias ggc=go-git-clone
+  alias gl='git pull'
   alias glog='git log --color --decorate --graph --oneline'
   alias glstat='git log --color --decorate --stat'
+  alias gm='git merge'
+  alias gp='git push'
+  alias gpdo='git push --delete origin'
   alias gpf='git push --force'
+  alias gpsu='git push --set-upstream'
+  alias gpsuo='git push --set-upstream origin'
   alias gradd='git remote add'
   alias grba='git rebase --abort'
   alias grbc='git rebase --continue'
   alias grbi='git rebase --interactive'
   alias grh='git reset HEAD'
   alias grhh='git reset HEAD --hard'
+  alias grp=git-rebase-preserve-author
   alias grpm='git-rebase-preserve-author master'
+  alias grrm='git remote remove'
   alias grset='git remote set-url'
   alias glum='git pull upstream master'
   alias grum='git rebase upstream/master'
@@ -37,29 +56,13 @@ if (( $+commands[git] )); then
   alias gsta='git stash'
   alias gstp='git stash pop'
 
-  abbrev-alias -g ga='git add'
-  abbrev-alias -g gap='git add --patch'
-  abbrev-alias -g gb='git branch'
-  abbrev-alias -g gbd='git branch --delete'
-  abbrev-alias -g gbdf='git branch --delete --force'
-  abbrev-alias -g gbsu='git branch --set-upstream-to'
-  abbrev-alias -g gc='git commit --gpg-sign --verbose'
-  abbrev-alias -g gc!='git commit --amend --gpg-sign --verbose'
-  abbrev-alias -g gco='git checkout'
-  abbrev-alias -g gd='git diff'
-  abbrev-alias -g gl='git pull'
-  abbrev-alias -g gm='git merge'
-  abbrev-alias -g gp='git push'
-  abbrev-alias -g gpdo='git push --delete origin'
-  abbrev-alias -g gpsu='git push --set-upstream'
-  abbrev-alias -g gpsuo='git push --set-upstream origin'
-  abbrev-alias -g grp=git-rebase-preserve-author
-  abbrev-alias -g grrm='git remote remove'
+  if (( $+commands[git-fresh] )); then
+    alias gff='git-fresh -f'
+  fi
 
   if (( $+commands[hub] )); then
     alias git=hub
-
-    abbrev-alias -g gpr='git pull-request'
+    alias gpr='git pull-request'
   fi
 fi
 
@@ -67,21 +70,29 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias brewski='brew update && brew upgrade && brew cleanup && brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
+  alias sed=gsed
+  alias tar=gtar
 fi
 
 if (( $+commands[kubectl] )); then
-  alias k214='kubectl --namespace=prd214'
-  alias k354='kubectl --namespace=prd354'
+  alias -g k=kubectl
+  alias -g k214='kubectl --namespace=prd214'
+  alias -g k354='kubectl --namespace=prd354'
+  alias kbuild='kustomize build'
   alias kc=kube-context
+  alias kkrew='kubectl krew'
   alias klogs='kubectl logs'
+  alias kn='kubectl -n'
   alias kport='kubectl port-forward'
-  alias kssh=kube-ssh
-  alias ksys='kubectl --namespace=kube-system'
-  alias ktec='kubectl --namespace=tectonic-system'
+  alias kssh=kube-ssh.sh
+  alias -g ksys='kubectl --namespace=kube-system'
+  alias -g ktec='kubectl --namespace=tectonic-system'
   alias kwatch='watch kubectl'
+fi
 
-  abbrev-alias -g k=kubectl
-  abbrev-alias -g kn='kubectl -n'
+if (( $+commands[stern] )); then
+  alias stern354='stern --namespace=prd354'
+  alias sternsys='stern --namespace=kube-system'
 fi
 
 if (( $+commands[exa] )); then
@@ -95,11 +106,10 @@ elif (( $+commands[ls] )); then
   fi
 fi
 
-alias cdgo='cd $GOPATH'
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean='docker system prune --all'
+alias dotfiles='code ${DOTFILES}'
+alias helm354='helm --tiller-namespace=prd354'
 alias less='less --force --no-init --hilite-search --ignore-case --SILENT --status-column --underline-special'
 alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
 alias tfgp='terraform get --update && terraform plan'
-
-abbrev-alias -g helm354='helm --tiller-namespace=prd354'

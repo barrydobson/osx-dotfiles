@@ -36,3 +36,4 @@ if (( $+commands[kubectl] )); then
 fi
 
 source /usr/local/opt/fzf/shell/completion.zsh
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc

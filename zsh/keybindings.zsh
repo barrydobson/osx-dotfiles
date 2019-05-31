@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-bindkey -d
+# bindkey -d
 bindkey -v
 
 bindkey -M vicmd '^A' beginning-of-line

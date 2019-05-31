@@ -2,7 +2,6 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 
-momo-lab/zsh-abbrev-alias
 paulirish/git-open
 
 mafredri/zsh-async path:async.zsh

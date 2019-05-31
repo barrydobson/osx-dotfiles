@@ -2,7 +2,34 @@
 
 # Ref: https://github.com/caarlos0/dotfiles
 
+setopt no_global_rcs
+
 umask 022
+
+export DOTFILES="${HOME}/dotfiles"
+
+typeset -gx -U path
+path=( \
+  /usr/local/sbin(N-/) \
+  /usr/local/bin(N-/) \
+  ~/bin(N-/) \
+  "$path[@]" \
+)
+
+export LANGUAGE="en_US.UTF-8"
+export LANG="${LANGUAGE}"
+export LC_ALL="${LANGUAGE}"
+export LC_CTYPE="${LANGUAGE}"
+
+export GNU_BIN="/usr/local/opt/coreutils/libexec/gnubin"
+export GOPATH="${HOME}/dev/go"
+export GOBIN="${GOPATH}/bin"
+export KREW_BIN="${KREW_ROOT:-${HOME}/.krew}/bin"
+export PATH="${KREW_BIN}:${GOBIN}:${PATH}"
+
+export KUBECONFIG="${HOME}/.kube/config:${HOME}/.kube/sandbox113.conf:${HOME}/Downloads/admin.conf"
+
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 typeset -U config_files
 config_files=(${DOTFILES}/zsh/*.zsh)
@@ -51,3 +78,5 @@ if (( $+commands[fasd] )); then
   source "${fasd_cache}"
   unset fasd_cache
 fi
+
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
