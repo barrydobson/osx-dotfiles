@@ -28,7 +28,6 @@ if (( $+commands[git] )); then
   alias gd='git diff'
   alias gdm='git diff master'
   alias gfa='git fetch --all --tags --prune'
-  alias ggc=go-git-clone
   alias gl='git pull'
   alias glog='git log --color --decorate --graph --oneline'
   alias glstat='git log --color --decorate --stat'
