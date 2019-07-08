@@ -10,6 +10,7 @@
       relink: true
 
 - link:
+    ~/.Brewfile: Brewfile
     ~/.curl-format.txt: curl-format.txt
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
@@ -27,51 +28,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 
-- tap:
-    - beeftornado/rmtree
-    - cyberark/tools
-    - dtan4/tools
-    - dustinwilson/tap
-    - tm/homebrew
-    - vitorgalvao/tiny-scripts
-    - wata727/tflint
-
-- brew:
-    - getantibody/tap/antibody
-    - argocd kubernetes-cli kubernetes-helm kustomize pulumi stern
-    - awscli
-    - bash zsh
-    - brew-cask-completion
-    - gnupg2 gopass pinentry-mac summon
-    - cask-repair
-    - cfssl openssl
-    - coreutils
-    - curl wget
-    - dep glide go protobuf
-    - dockutil
-    - exa fasd fd fzf the_silver_searcher
-    - ghrls git git-fresh hub
-    - gnu-tar
-    - graphviz terraform tflint
-    - highlight less
-    - hugo
-    - jq
-    - mas
-    - watch
-
-- cask:
-    - caffeine
-    - docker
-    - google-chrome
-    - google-cloud-sdk
-    - iterm2
-    - java
-    - keybase
-    #   - minikube
-    - slack
-    - tech-pass
-    - visual-studio-code
-    - zoomus
+- brewfile: { file: Brewfile }
 
 - shell:
     - [
@@ -84,10 +41,6 @@
       ]
     #   - [chsh -s $(brew --prefix)/bin/zsh, Setting zsh as shell]
     - helm init --client-only
-
-- shell:
-    - [sh -c 'mas install 497799835', Installing Xcode]
-    - mas outdated && mas upgrade
 
 - shell:
     - dockutil --remove Safari
@@ -104,9 +57,9 @@
     - dockutil --remove iBooks
     - dockutil --remove 'App Store'
     - dockutil --remove 'System Preferences'
-    - dockutil --add /Applications/iTerm.app --after Finder
+    - dockutil --add '/Applications/iTerm.app' --after Finder
     - dockutil --add '/Applications/Visual Studio Code.app' --after iTerm
     - dockutil --add '/Applications/Google Chrome.app' --after 'Visual Studo Code'
-    - dockutil --add /Applications/Slack.app --after 'Google Chrome'
+    - dockutil --add '/Applications/Slack.app' --after 'Google Chrome'
     - dockutil --add '/Applications/Microsoft Outlook.app' --after Slack
-    - dockutil --add /Applications/zoom.us.app --after 'Microsoft Outlook'
+    - dockutil --add '/Applications/zoom.us.app' --after 'Microsoft Outlook'

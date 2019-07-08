@@ -1,15 +1,6 @@
 [submodule "dotbot"]
   path = dotbot
   url = https://github.com/anishathalye/dotbot
-[submodule "dotbot-brew"]
-  path = dotbot-brew
-  url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "omf/pkg/asp"]
-  path = omf/pkg/asp
-  url = git@github.com:mgoodness/plugin-asp
-[submodule "omf/themes/opsgoodness"]
-  path = omf/themes/opsgoodness
-  url = git@github.com:mgoodness/theme-opsgoodness.git
-[submodule "omf/pkg/kube-utils"]
-	path = omf/pkg/kube-utils
-	url = git@github.com:mgoodness/plugin-kube-utils.git
+[submodule "dotbot-brewfile"]
+	path = dotbot-brewfile
+	url = https://github.com/sobolevn/dotbot-brewfile.git
