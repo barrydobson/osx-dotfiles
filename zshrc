@@ -27,7 +27,7 @@ export GOBIN="${GOPATH}/bin"
 export KREW_BIN="${KREW_ROOT:-${HOME}/.krew}/bin"
 export PATH="${KREW_BIN}:${GOBIN}:${PATH}"
 
-export KUBECONFIG="${HOME}/.kube/config:${HOME}/.kube/sandbox113.conf:${HOME}/Downloads/admin.conf"
+export KUBECONFIG="${HOME}/.kube/config:${HOME}/.kube/beta5.conf:${HOME}/.kube/sandbox5.conf:${HOME}/.kube/sandbox113.conf"
 
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 

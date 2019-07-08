@@ -1,4 +1,3 @@
-# nonprod us-east-1
 Host git.tmaws.io
   ControlMaster no
   IdentitiesOnly yes
@@ -10,6 +9,7 @@ Host github.com
   IdentityFile ~/.ssh/id_rsa_yubikey.pub
   MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
 
+# nonprod us-east-1
 Host 10.132.* *.nonprod.k8s-tmaws.io *.tktm.io
   IdentitiesOnly yes
   IdentityFile ~/.ssh/kubernauts-nonprod-east.pem
