@@ -1,0 +1,42 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "vim.leader": ",",
+    "vim.useSystemClipboard": true,
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "files.autoSave": "off",
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": true,
+    "breadcrumbs.enabled": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "git.confirmSync": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "files.insertFinalNewline": true,
+    "editor.renderControlCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.associations": {
+        "zshenv": "shellscript",
+        "zshrc": "shellscript"
+    },
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.external.osxExec": "iTerm",
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path": "/Users/mgoodness/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.helm-path": "/Users/mgoodness/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.kubectl-path": "/Users/mgoodness/.vs-kubernetes/tools/kubectl/kubectl",
+        "vs-kubernetes.draft-path": "/Users/mgoodness/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+    },
+    "explorer.autoReveal": false,
+    "yaml.format.enable": true,
+    "go.useLanguageServer": true
+}
