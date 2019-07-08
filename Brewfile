@@ -3,7 +3,6 @@ tap "beeftornado/rmtree"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "kustomize"
-brew "pulumi"
 brew "stern"
 
 brew "bash"

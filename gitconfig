@@ -36,8 +36,6 @@
 [mergetool "vscode"]
   cmd = code --wait $MERGED
 [url "git@github.com:"]
-	insteadOf = https://github.com/
-[url "git@git.tmaws.io:"]
-	insteadOf = https://git.tmaws.io/
+  insteadOf = https://github.com/
 [gpg]
-	program = /usr/local/bin/gpg
+  program = /usr/local/bin/gpg

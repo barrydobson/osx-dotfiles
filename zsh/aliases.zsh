@@ -3,7 +3,6 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias dev='cd ~/dev'
 
 autoload -Uz run-help
 alias help=run-help
@@ -75,22 +74,17 @@ fi
 
 if (( $+commands[kubectl] )); then
   alias -g k=kubectl
-  alias -g k214='kubectl --namespace=prd214'
-  alias -g k354='kubectl --namespace=prd354'
   alias kbuild='kustomize build'
   alias kc=kube-context
   alias kkrew='kubectl krew'
   alias klogs='kubectl logs'
   alias kn='kubectl -n'
   alias kport='kubectl port-forward'
-  alias kssh=kube-ssh.sh
   alias -g ksys='kubectl --namespace=kube-system'
-  alias -g ktec='kubectl --namespace=tectonic-system'
   alias kwatch='watch kubectl'
 fi
 
 if (( $+commands[stern] )); then
-  alias stern354='stern --namespace=prd354'
   alias sternsys='stern --namespace=kube-system'
 fi
 
@@ -108,7 +102,6 @@ fi
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean='docker system prune --all'
 alias dotfiles='code ${DOTFILES}'
-alias helm354='helm --tiller-namespace=prd354'
 alias less='less --force --no-init --hilite-search --ignore-case --SILENT --status-column --underline-special'
 alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
 alias tfgp='terraform get --update && terraform plan'

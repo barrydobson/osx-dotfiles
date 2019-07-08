@@ -1,63 +1,8 @@
-Host git.tmaws.io
-  ControlMaster no
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_rsa_yubikey.pub
-
 Host github.com
   ControlMaster no
   IdentitiesOnly yes
   IdentityFile ~/.ssh/id_rsa_yubikey.pub
   MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
-
-# nonprod us-east-1
-Host 10.132.* *.nonprod.k8s-tmaws.io *.tktm.io
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-nonprod-east.pem
-
-# nonprod us-west-2
-Host 10.20.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-nonprod-west.pem
-
-# preprod us-east-1
-Host 10.133.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-preprod-east.pem
-
-# preprod us-west-2
-Host 10.21.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-preprod-west.pem
-
-# preprodpci us-east-1
-Host 10.134.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-preprodpci-east.pem
-
-# preprodpci us-west-2
-Host 10.22.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-preprodpci-west.pem
-
-# prod us-east-1
-Host 10.135.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-prod-east.pem
-
-# prod us-west-2
-Host 10.23.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-prod-west.pem
-
-# prodpci us-east-1
-Host 10.136.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-prodpci-east.pem
-
-# prodpci us-west-2
-Host 10.24.*
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/kubernauts-prodpci-west.pem
 
 Host *
 # https://github.com/drduh/config/blob/master/ssh_config

@@ -22,12 +22,12 @@ export LC_ALL="${LANGUAGE}"
 export LC_CTYPE="${LANGUAGE}"
 
 export GNU_BIN="/usr/local/opt/coreutils/libexec/gnubin"
-export GOPATH="${HOME}/dev/go"
+export GOPATH="${HOME}/go"
 export GOBIN="${GOPATH}/bin"
 export KREW_BIN="${KREW_ROOT:-${HOME}/.krew}/bin"
 export PATH="${KREW_BIN}:${GOBIN}:${PATH}"
 
-export KUBECONFIG="${HOME}/.kube/config:${HOME}/.kube/beta5.conf:${HOME}/.kube/sandbox5.conf:${HOME}/.kube/sandbox113.conf"
+export KUBECONFIG="${HOME}/.kube/config"
 
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
