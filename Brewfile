@@ -12,6 +12,7 @@ brew "brew-cask-completion"
 
 brew "gnupg2"
 brew "pinentry-mac"
+brew "bitwarden-cli"
 
 brew "cfssl"
 brew "openssl"
@@ -46,6 +47,7 @@ brew "watch"
 
 brew "terraform"
 
+cask "bitwarden"
 cask "caffeine"
 cask "docker"
 cask "google-chrome"
