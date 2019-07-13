@@ -11,9 +11,7 @@ brew "getantibody/tap/antibody"
 brew "brew-cask-completion"
 
 brew "gnupg2"
-brew "gopass"
 brew "pinentry-mac"
-brew "cyberark/tools/summon"
 
 brew "cfssl"
 brew "openssl"
