@@ -1,4 +1,9 @@
+tap "vitorgalvao/tiny-scripts"
 tap "beeftornado/rmtree"
+tap "getantibody/tap"
+tap "dtan4/tools"
+
+brew "vitorgalvao/tiny-scripts/cask-repair"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
@@ -58,5 +63,3 @@ cask "keybase"
 cask "slack"
 cask "visual-studio-code"
 cask "zoomus"
-
-mas "Xcode", id: 497799835

@@ -27,42 +27,20 @@
     ~/Library/LaunchAgents/homebrew.gpg.gpg-agent.plist: LaunchAgents/homebrew.gpg.gpg-agent.plist
     ~/Library/LaunchAgents/link-ssh-auth-sock.plist: LaunchAgents/link-ssh-auth-sock.plist
 
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
-
-- brewfile: { file: Brewfile }
+- brewfile:
+    - Brewfile
 
 - shell:
-    - [
-        sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells',
-        Adding bash shell,
-      ]
-    - [
-        sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells',
-        Adding zsh shell,
-      ]
-    - [chsh -s $(brew --prefix)/bin/zsh, Setting zsh as shell]
-    - [
-        sh -c 'antibody bundle < zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update',
-        Updating antibody plugins,
-      ]
+    - sh -c 'grep -q $(brew --prefix)/bin/bash /etc/shells || echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells'
+    - sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells'
+    - chsh -s $(brew --prefix)/bin/zsh
+    - sh -c 'antibody bundle < zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
     - helm init --client-only
+    - chmod 0700 ~/.gnupg
+    - defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+    - sh -c 'cd $(brew --repository) && hub issue'
 
 - shell:
-    - dockutil --remove Safari
-    - dockutil --remove Launchpad
-    - dockutil --remove Mail
-    - dockutil --remove Contacts
-    - dockutil --remove Calendar
-    - dockutil --remove Notes
-    - dockutil --remove Reminders
-    - dockutil --remove Maps
-    - dockutil --remove Photos
-    - dockutil --remove FaceTime
-    - dockutil --remove iTunes
-    - dockutil --remove iBooks
-    - dockutil --remove 'App Store'
-    - dockutil --remove 'System Preferences'
     - dockutil --add '/Applications/iTerm.app' --after Finder
     - dockutil --add '/Applications/Visual Studio Code.app' --after iTerm
     - dockutil --add '/Applications/Google Chrome.app' --after 'Visual Studo Code'
