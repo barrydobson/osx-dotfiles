@@ -65,7 +65,7 @@ if (( $+commands[git] )); then
 fi
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  alias brewski='brew bundle --global && brew cleanup && brew doctor'
+  alias brewski='brew update && brew bundle --global && brew cleanup && brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
   alias sed=gsed

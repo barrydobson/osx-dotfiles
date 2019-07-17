@@ -17,7 +17,7 @@
   default = upstream
 [user]
   name = Michael Goodness
-  signingkey = 7C9D28EFD15FEAD2
+  signingkey = 4A31C228815AA553
   useConfigOnly = true
 [hub]
   protocol = ssh
