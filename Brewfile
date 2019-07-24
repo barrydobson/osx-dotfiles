@@ -1,17 +1,24 @@
-tap "vitorgalvao/tiny-scripts"
 tap "beeftornado/rmtree"
-tap "getantibody/tap"
-tap "dtan4/tools"
 
+tap "vitorgalvao/tiny-scripts"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 
+brew "awscli"
+brew "aws-iam-authenticator"
+tap "weaveworks/tap"
+brew "weaveworks/tap/eksctl"
+
+tap "cuelang/tap"
+brew "cuelang/tap/cue"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "kustomize"
+brew "skaffold"
 brew "stern"
 
 brew "bash"
 brew "zsh"
+tap "getantibody/tap"
 brew "getantibody/tap/antibody"
 brew "brew-cask-completion"
 
@@ -42,6 +49,7 @@ brew "fzf"
 brew "the_silver_searcher"
 
 brew "git"
+tap "dtan4/tools"
 brew "dtan4/tools/ghrls"
 brew "git-fresh"
 brew "hub"
@@ -53,7 +61,6 @@ brew "watch"
 
 brew "terraform"
 
-cask "bitwarden"
 cask "caffeine"
 cask "docker"
 cask "google-chrome"

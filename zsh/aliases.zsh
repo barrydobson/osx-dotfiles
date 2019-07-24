@@ -65,7 +65,10 @@ if (( $+commands[git] )); then
 fi
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  alias brewski='brew update && brew bundle --global && brew cleanup && brew doctor'
+  alias brewski='brew update && \
+    brew bundle --global && \
+    brew cleanup && \
+    brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
   alias sed=gsed
@@ -99,9 +102,15 @@ elif (( $+commands[ls] )); then
   fi
 fi
 
+alias aws-creds='docker run -it --rm \
+  -v ~/.aws/credentials:/root/.aws/credentials \
+  -v ~/.okta_aws_login_config:/root/.okta_aws_login_config \
+  gimme-aws-creds'
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean='docker system prune --all'
 alias dotfiles='code ${DOTFILES}'
-alias less='less --force --no-init --hilite-search --ignore-case --SILENT --status-column --underline-special'
-alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
+alias less='less --force --no-init --hilite-search --ignore-case \
+  --SILENT --status-column --underline-special'
+alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && \
+  antibody update'
 alias tfgp='terraform get --update && terraform plan'

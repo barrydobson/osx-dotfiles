@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro Vivid",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "vim.leader": ",",
@@ -38,5 +37,12 @@
     },
     "explorer.autoReveal": false,
     "yaml.format.enable": true,
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "workbench.colorTheme": "Dark Mode",
+    "markdown.extension.toc.githubCompatibility": true,
+    "cloudcode.gke": {
+        "projectIds": [
+            "mlb-infra-sbx-de1f"
+        ]
+    }
 }
