@@ -8,6 +8,8 @@ brew "aws-iam-authenticator"
 tap "weaveworks/tap"
 brew "weaveworks/tap/eksctl"
 
+tap "argoproj/tap"
+brew "argoproj/tap/argocd"
 tap "cuelang/tap"
 brew "cuelang/tap/cue"
 brew "kubernetes-cli"

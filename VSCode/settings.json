@@ -30,10 +30,10 @@
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.external.osxExec": "iTerm",
     "vs-kubernetes": {
-        "vs-kubernetes.minikube-path": "/Users/mgoodness/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-        "vs-kubernetes.helm-path": "/Users/mgoodness/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-        "vs-kubernetes.kubectl-path": "/Users/mgoodness/.vs-kubernetes/tools/kubectl/kubectl",
-        "vs-kubernetes.draft-path": "/Users/mgoodness/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+        "vs-kubernetes.minikube-path": "/Users/michael.goodness/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.helm-path": "/Users/michael.goodness/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.kubectl-path": "/Users/michael.goodness/.vs-kubernetes/tools/kubectl/kubectl",
+        "vs-kubernetes.draft-path": "/Users/michael.goodness/.vs-kubernetes/tools/draft/darwin-amd64/draft"
     },
     "explorer.autoReveal": false,
     "yaml.format.enable": true,
