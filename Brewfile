@@ -26,7 +26,6 @@ brew "brew-cask-completion"
 
 brew "gnupg2"
 brew "pinentry-mac"
-brew "bitwarden-cli"
 
 brew "cfssl"
 brew "openssl"
@@ -63,6 +62,7 @@ brew "watch"
 
 brew "terraform"
 
+cask "1password"
 cask "caffeine"
 cask "docker"
 cask "google-chrome"
@@ -74,4 +74,5 @@ cask "slack"
 cask "visual-studio-code"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
+cask "yubico-yubikey-personalization-gui"
 cask "zoomus"
