@@ -1,0 +1,8 @@
+while true; do
+  docker run -it --rm \
+    -v ~/.aws/credentials:/root/.aws/credentials \
+    -v ~/.okta_aws_login_config:/root/.okta_aws_login_config \
+    gimme-aws-creds
+
+    sleep 3600
+done

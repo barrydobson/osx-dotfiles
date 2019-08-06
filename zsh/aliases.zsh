@@ -67,6 +67,7 @@ fi
 if [[ "$(uname)" == "Darwin" ]]; then
   alias brewski='brew update && \
     brew bundle --global && \
+    brew upgrade &&
     brew cleanup && \
     brew doctor'
   alias fixbt='sudo killall coreaudiod'
@@ -102,10 +103,6 @@ elif (( $+commands[ls] )); then
   fi
 fi
 
-alias aws-creds='docker run -it --rm \
-  -v ~/.aws/credentials:/root/.aws/credentials \
-  -v ~/.okta_aws_login_config:/root/.okta_aws_login_config \
-  gimme-aws-creds'
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
 alias dockerclean='docker system prune --all'
 alias dotfiles='code ${DOTFILES}'

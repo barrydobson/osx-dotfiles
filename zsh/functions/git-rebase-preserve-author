@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-git rebase --preserve-merges "$1"
+git rebase --rebase-merges "$1"
 
 root_dir=(git rev-parse --show-toplevel)
 while [[ -f "${root_dir}/.git/rebase-merge/stopped-sha" ]]; do
