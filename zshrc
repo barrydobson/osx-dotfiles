@@ -27,8 +27,6 @@ export GOBIN="${GOPATH}/bin"
 export KREW_BIN="${KREW_ROOT:-${HOME}/.krew}/bin"
 export PATH="${KREW_BIN}:${GOBIN}:${PATH}"
 
-export KUBECONFIG="${HOME}/.kube/config"
-
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 typeset -U config_files
@@ -78,5 +76,7 @@ if (( $+commands[fasd] )); then
   source "${fasd_cache}"
   unset fasd_cache
 fi
+
+kubeconfig
 
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 while true; do
   docker run -it --rm \
     -v ~/.aws/credentials:/root/.aws/credentials \

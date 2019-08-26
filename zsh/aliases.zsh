@@ -42,10 +42,12 @@ if (( $+commands[git] )); then
   alias grbi='git rebase --interactive'
   alias grh='git reset HEAD'
   alias grhh='git reset HEAD --hard'
+  alias grmv='git remote rename'
   alias grp=git-rebase-preserve-author
   alias grpm='git-rebase-preserve-author master'
   alias grrm='git remote remove'
   alias grset='git remote set-url'
+  alias grv='git remote -v'
   alias glum='git pull upstream master'
   alias grum='git rebase upstream/master'
   alias grup='git remote update'
