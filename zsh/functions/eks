@@ -1,18 +1,12 @@
-local profile
-local region="us-east-1"
+#!/usr/bin/env bash
 
-while getopts ':p:r:' arg; do
-  case $arg in
-    p) profile=${OPTARG};;
-    r) region=${OPTARG};;
-  esac
-done
+local region="${1:-us-east-1}"
 
-[[ -z "${profile}" ]] && \
-  profile=$(cat ~/.aws/credentials | ag 'mlb-.*?(?=])' -o | fzf --no-multi)
+local profile=$(cat ~/.aws/credentials | ag 'mlb-.*?(?=])' -o | fzf --no-multi)
 
-cluster=$(eksctl get cluster --profile="${profile}" --region="${region}" \
-  | cut -f1 \
-  | fzf --no-multi --header-lines=1)
+local cluster_info=$(eksctl get cluster -p ${profile} -r ${region} \
+  | fzf --header-lines=1 --no-multi)
 
-eksctl utils write-kubeconfig --name="${cluster}" --profile="${profile}" --region="${region}"
+local cluster_name=$(echo ${cluster_info} | cut -f1)
+
+eksctl utils write-kubeconfig -n ${cluster_name} -p ${profile} -r ${region}

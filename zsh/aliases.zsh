@@ -21,6 +21,7 @@ if (( $+commands[git] )); then
   alias gc!='git commit --amend --gpg-sign --signoff --verbose'
   alias gca='git commit --all --gpg-sign --signoff --verbose'
   alias gca!='git commit --all --gpg-sign --amend --signoff --verbose'
+  alias gcae='git commit --allow-empty --gpg-sign --signoff --verbose'
   alias gcm='git checkout master'
   alias gco='git checkout'
   alias gcp='git cherry-pick'
