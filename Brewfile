@@ -1,78 +1,90 @@
-tap "beeftornado/rmtree"
+tap 'beeftornado/rmtree'
 
-tap "vitorgalvao/tiny-scripts"
-brew "vitorgalvao/tiny-scripts/cask-repair"
+tap 'vitorgalvao/tiny-scripts'
+brew 'vitorgalvao/tiny-scripts/cask-repair'
 
-brew "awscli"
-brew "aws-iam-authenticator"
-tap "weaveworks/tap"
-brew "weaveworks/tap/eksctl"
+brew 'awscli'
+brew 'aws-iam-authenticator'
+tap 'weaveworks/tap'
+brew 'weaveworks/tap/eksctl'
 
-tap "argoproj/tap"
-brew "argoproj/tap/argocd"
-tap "cuelang/tap"
-brew "cuelang/tap/cue"
-brew "kubernetes-cli"
-brew "kubernetes-helm"
-brew "kustomize"
-brew "skaffold"
-brew "stern"
+tap 'argoproj/tap'
+brew 'argoproj/tap/argocd'
+tap 'cuelang/tap'
+brew 'cuelang/tap/cue'
+tap 'instrumenta/instrumenta'
+brew 'kubeval'
+brew 'kubernetes-cli'
+brew 'kubernetes-helm'
+brew 'kustomize'
+brew 'skaffold'
+brew 'stern'
 
-brew "bash"
-brew "zsh"
-tap "getantibody/tap"
-brew "getantibody/tap/antibody"
-brew "brew-cask-completion"
+brew 'bash'
+brew 'zsh'
+tap 'getantibody/tap'
+brew 'getantibody/tap/antibody'
+brew 'brew-cask-completion'
+brew 'starship'
 
-brew "gnupg2"
-brew "pinentry-mac"
+brew 'gnupg2'
+brew 'pinentry-mac'
 
-brew "cfssl"
-brew "openssl"
+brew 'cfssl'
+brew 'openssl'
 
-brew "coreutils"
-brew "curl"
-brew "gnu-sed"
-brew "gnu-tar"
-brew "wget"
+brew 'coreutils'
+brew 'curl'
+brew 'gnu-sed'
+brew 'gnu-tar'
+brew 'wget'
 
-brew "dep"
-brew "glide"
-brew "go"
-brew "protobuf"
+brew 'dep'
+brew 'glide'
+brew 'go'
+brew 'protobuf'
+tap 'golangci/tap'
+brew 'golangci/tap/golangci-lint'
 
-brew "dockutil"
+brew 'dockutil'
 
-brew "exa"
-brew "fasd"
-brew "fd"
-brew "fzf"
-brew "the_silver_searcher"
+brew 'exa'
+brew 'fasd'
+brew 'fd'
+brew 'fzf'
+brew 'ripgrep'
 
-brew "git"
-tap "dtan4/tools"
-brew "dtan4/tools/ghrls"
-brew "git-fresh"
-brew "hub"
+brew 'git'
+tap 'dtan4/tools'
+brew 'dtan4/tools/ghrls'
+brew 'git-fresh'
+brew 'hub'
 
-brew "highlight"
-brew "less"
-brew "jq"
-brew "watch"
+brew 'highlight'
+brew 'less'
+brew 'moreutils'
+brew 'jq'
+brew 'watch'
+brew 'yq'
 
-brew "terraform"
+brew 'tfenv'
 
-cask "1password"
-cask "caffeine"
-cask "docker"
-cask "google-chrome"
-cask "google-cloud-sdk"
-cask "iterm2"
-cask "java"
-cask "keybase"
-cask "slack"
-cask "visual-studio-code"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
-cask "yubico-yubikey-personalization-gui"
-cask "zoomus"
+cask '1password'
+cask 'caffeine'
+cask 'docker'
+cask 'google-chrome'
+cask 'google-cloud-sdk'
+cask 'google-drive-file-stream'
+cask 'iterm2'
+cask 'java'
+cask 'keybase'
+cask 'postman'
+cask 'slack'
+cask 'visual-studio-code'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'yubico-yubikey-personalization-gui'
+cask 'zoomus'
+
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code'
