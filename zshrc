@@ -62,6 +62,7 @@ done
 unset config_files updated_at
 
 autoload -U "${DOTFILES}"/zsh/functions/*(:t)
+autoload -Uz zmv
 
 # Number of matches to list without asking first
 export LISTMAX=50
