@@ -1,48 +1,61 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "vim.leader": ",",
-    "vim.useSystemClipboard": true,
-    "vim.sneak": true,
-    "vim.easymotion": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "window.zoomLevel": 0,
-    "git.autofetch": true,
-    "files.autoSave": "off",
-    "workbench.startupEditor": "none",
-    "editor.minimap.enabled": true,
-    "breadcrumbs.enabled": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.tabSize": 2,
-    "git.confirmSync": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "files.insertFinalNewline": true,
-    "editor.renderControlCharacters": false,
-    "diffEditor.ignoreTrimWhitespace": true,
-    "files.associations": {
-        "zshenv": "shellscript",
-        "zshrc": "shellscript"
-    },
-    "terminal.integrated.macOptionIsMeta": true,
-    "terminal.external.osxExec": "iTerm",
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path": "/Users/michael.goodness/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-        "vs-kubernetes.helm-path": "/Users/michael.goodness/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-        "vs-kubernetes.kubectl-path": "/Users/michael.goodness/.vs-kubernetes/tools/kubectl/kubectl",
-        "vs-kubernetes.draft-path": "/Users/michael.goodness/.vs-kubernetes/tools/draft/darwin-amd64/draft"
-    },
-    "explorer.autoReveal": false,
-    "yaml.format.enable": true,
-    "go.useLanguageServer": true,
-    "workbench.colorTheme": "Dark Mode",
-    "markdown.extension.toc.githubCompatibility": true,
-    "cloudcode.gke": {
-        "projectIds": [
-            "mlb-infra-sbx-de1f"
-        ]
-    }
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "window.zoomLevel": 0,
+  "git.autofetch": true,
+  "files.autoSave": "off",
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": true,
+  "breadcrumbs.enabled": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "git.confirmSync": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "files.insertFinalNewline": true,
+  "editor.renderControlCharacters": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "files.associations": {
+    "zshenv": "shellscript",
+    "zshrc": "shellscript"
+  },
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.external.osxExec": "iTerm",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "explorer.autoReveal": false,
+  "go.useLanguageServer": true,
+  "workbench.colorTheme": "Dark Mode",
+  "markdown.extension.toc.githubCompatibility": true,
+  "cloudcode.gke": {
+    "projectIds": [
+      "mlb-infra-sbx-de1f"
+    ]
+  },
+  "cloudcode.yaml.format.singleQuote": true,
+  "cloudcode.yaml.format.enable": true,
+  "cloudcode.yaml.format.bracketSpacing": false,
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  }
 }
