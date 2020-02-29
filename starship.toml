@@ -1,0 +1,44 @@
+[battery]
+disabled = true
+
+[cmd_duration]
+style = 'yellow'
+
+[directory]
+style = 'blue'
+
+[git_branch]
+style = 'purple'
+
+[git_commit]
+disabled = false
+style = 'green'
+
+[git_state]
+style = 'yellow'
+
+[git_status]
+style = 'red'
+
+[java]
+disabled = true
+
+[kubernetes]
+disabled = false
+style = 'cyan'
+symbol = ''
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true

@@ -1,6 +1,6 @@
 # https://github.com/anishathalye/dotbot
 
-- clean: ["~"]
+- clean: ['~']
 
 - defaults:
     link:
@@ -11,6 +11,8 @@
 
 - link:
     ~/.Brewfile: Brewfile
+    ~/.config/git/commit.txt: git-commit.txt
+    ~/.config/starship.toml: starship.toml
     ~/.curl-format.txt: curl-format.txt
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore-global
@@ -35,7 +37,6 @@
     - sh -c 'grep -q $(brew --prefix)/bin/zsh /etc/shells || echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells'
     - chsh -s $(brew --prefix)/bin/zsh
     - sh -c 'antibody bundle < zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
-    - helm init --client-only
     - chmod 0700 ~/.gnupg
     - defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
     - sh -c 'cd $(brew --repository) && hub issue'
