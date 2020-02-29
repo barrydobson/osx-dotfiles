@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+local branch branches fzf_query
+
+branches=$(git --no-pager branch -vv)
+[[ -n "$@" ]] && fzf_query="--query=$@"
+
+printf ${branches} \
+  | fzf --no-multi ${fzf_query} \
+  | awk '{if ($1!="*") print $1; else print $2 }'

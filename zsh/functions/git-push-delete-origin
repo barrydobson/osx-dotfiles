@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+local branch="$1"
+
+if [[ -z "${branch}" ]]; then
+  git fetch --all --tags --prune
+  branch="$(git-select-branch $@)"
+fi
+
+git push --delete origin "${branch}"

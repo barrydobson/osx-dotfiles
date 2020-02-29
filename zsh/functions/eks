@@ -2,11 +2,11 @@
 
 local region="${1:-us-east-1}"
 
-local profile=$(cat ~/.aws/credentials | ag 'mlb-.*?(?=])' -o | fzf --no-multi)
+local profile=$(cat ~/.aws/credentials | rg 'mlb-.*?(?=])' -o | fzf --no-multi)
 
 local cluster_info=$(eksctl get cluster -p ${profile} -r ${region} \
   | fzf --header-lines=1 --no-multi)
 
-local cluster_name=$(echo ${cluster_info} | cut -f1)
+local cluster_name=$(printf ${cluster_info} | cut -f1)
 
 eksctl utils write-kubeconfig -n ${cluster_name} -p ${profile} -r ${region}

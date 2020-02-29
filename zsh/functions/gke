@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
-local project=$(gcloud projects list --format="table(projectId)" \
+local clusters=$(gcloud container clusters list --format='table(name,zone)' \
   | fzf --header-lines=1 --no-multi)
 
-local cluster_info=$(gcloud beta container clusters list \
-  --project=${project} --format="table(name,zone)" \
-  | fzf --header-lines=1 --no-multi)
-
-local cluster_name=$(echo ${cluster_info} | cut -f1 -d' ')
-local cluster_region=$(echo ${cluster_info} | tr -s ' ' | cut -f2 -d' ')
-
-gcloud beta container clusters get-credentials ${cluster_name} \
-  --project=${project} --region=${cluster_region}
+gcloud container clusters get-credentials \
+  "$(printf ${clusters} | cut -f1 -d' ')" \
+  --region=$(printf ${clusters} | tr -s ' ' | cut -f2 -d' ')

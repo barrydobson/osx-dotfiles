@@ -33,7 +33,7 @@ echo -n "Proceed (y/n)? "
 read yesorno
 [[ "${yesorno}" != "y" ]] && return
 
-gcloud beta container --project ${project_id} clusters create "${cluster_name}" \
+gcloud container --project ${project_id} clusters create "${cluster_name}" \
   --region "${region}" \
   --no-enable-basic-auth \
   --cluster-version "1.13.7-gke.8" \

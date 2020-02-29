@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+local branch="$1"
+
+if [[ -z "${branch}" ]]; then
+  branch="$(git-select-branch $@)"
+fi
+
+git checkout "${branch}"

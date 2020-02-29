@@ -2,8 +2,8 @@
 
 local context contexts fzf_query
 
-contexts=$(kubectl config get-contexts -o name)
+contexts=$(gcloud config configurations list --format='value(name)')
 
 [[ -n "$@" ]] && fzf_query="--query=$@"
 context=$(printf ${contexts} | fzf --no-multi ${fzf_query})
-[[ -n "${context}" ]] && kubectl config use-context "${context}"
+[[ -n "${context}" ]] && gcloud config configurations activate "${context}"
