@@ -60,7 +60,7 @@ brew 'dtan4/tools/ghrls'
 brew 'git-fresh'
 brew 'hub'
 
-brew 'highlight'
+brew 'bat'
 brew 'less'
 brew 'moreutils'
 brew 'jq'

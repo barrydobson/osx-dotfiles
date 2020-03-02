@@ -11,6 +11,7 @@
 
 - link:
     ~/.Brewfile: Brewfile
+    ~/.config/bat/config: bat-config
     ~/.config/git/commit.txt: git-commit.txt
     ~/.config/starship.toml: starship.toml
     ~/.curl-format.txt: curl-format.txt
