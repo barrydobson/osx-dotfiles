@@ -1,11 +1,16 @@
 #!/usr/bin/env zsh
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..=' cd ..'
+alias ...=' cd ../..'
+alias ....=' cd ../../..'
 
 autoload -Uz run-help
 alias help=run-help
+
+if (( $+commands[gcloud] )); then
+  alias gcontext='gcloud-context'
+  alias new-gcc='new-gcloud-context'
+fi
 
 if (( $+commands[git] )); then
   alias ga='git add'
@@ -13,17 +18,21 @@ if (( $+commands[git] )); then
   alias gap='git add --patch'
   alias gb='git branch'
   alias gba='git branch --all'
-  alias gbd='git branch --delete'
   alias gbdf='git branch --delete --force'
+  alias gbdr='git branch --delete --remote'
+  alias gbm='git branch --move'
   alias gbr='git branch --remote'
+  alias gbsu='git branch --set-upstream-to'
   alias gbu='git branch --unset-upstream'
   alias gc='git commit --gpg-sign --signoff --verbose'
   alias gc!='git commit --amend --gpg-sign --signoff --verbose'
   alias gca='git commit --all --gpg-sign --signoff --verbose'
   alias gca!='git commit --all --gpg-sign --amend --signoff --verbose'
   alias gcae='git commit --allow-empty --gpg-sign --signoff --verbose'
+  alias gcae!='git commit --allow-empty --gpg-sign --amend --signoff --verbose'
   alias gcm='git checkout master'
-  alias gco='git checkout'
+  alias gco=git-checkout
+  alias gcob='git checkout -b'
   alias gcp='git cherry-pick'
   alias gd='git diff'
   alias gdm='git diff master'
@@ -33,7 +42,7 @@ if (( $+commands[git] )); then
   alias glstat='git log --color --decorate --stat'
   alias gm='git merge'
   alias gp='git push'
-  alias gpdo='git push --delete origin'
+  alias gpdo=git-push-delete-origin
   alias gpf='git push --force'
   alias gpsu='git push --set-upstream'
   alias gpsuo='git push --set-upstream origin'
@@ -67,7 +76,7 @@ if (( $+commands[git] )); then
   fi
 fi
 
-if [[ "$(uname)" == "Darwin" ]]; then
+if [[ "$(uname -s)" == "Darwin" ]]; then
   alias brewski='brew update && \
     brew bundle --global && \
     brew upgrade &&
@@ -80,12 +89,13 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 if (( $+commands[kubectl] )); then
-  alias -g k=kubectl
+  alias k=kubectl
   alias kbuild='kustomize build'
   alias kc=kube-context
+  alias kclean=kube-clean-contexts
   alias kkrew='kubectl krew'
   alias klogs='kubectl logs'
-  alias kn='kubectl -n'
+  alias kn=kube-namespace
   alias kport='kubectl port-forward'
   alias -g ksys='kubectl --namespace=kube-system'
   alias kwatch='watch kubectl'
@@ -95,15 +105,9 @@ if (( $+commands[stern] )); then
   alias sternsys='stern --namespace=kube-system'
 fi
 
-if (( $+commands[exa] )); then
-  alias ls='exa'
-  alias tree='exa --tree'
-elif (( $+commands[ls] )); then
-  if is_osx; then
-    alias ls='ls -GF'
-  else
-    alias ls='ls -F --color'
-  fi
+if (( $+commands[terraform] )); then
+  alias tf=terraform
+  alias tfgp='terraform get --update && terraform plan'
 fi
 
 alias curl-trace='curl -w "@/.curl-format.txt" -o /dev/null -s'
@@ -113,4 +117,5 @@ alias less='less --force --no-init --hilite-search --ignore-case \
   --SILENT --status-column --underline-special'
 alias plugins='antibody bundle < ${DOTFILES}/zsh/plugins.txt > ~/.zsh_plugins.sh && \
   antibody update'
-alias tfgp='terraform get --update && terraform plan'
+alias tmp=' cd $(mktemp -d)'
+alias watch='watch '
