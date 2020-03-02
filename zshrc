@@ -21,10 +21,13 @@ export LANG="${LANGUAGE}"
 export LC_ALL="${LANGUAGE}"
 export LC_CTYPE="${LANGUAGE}"
 
-export GNU_BIN="/usr/local/opt/coreutils/libexec/gnubin"
 export GOPATH="${HOME}/dev/go"
 export GOBIN="${GOPATH}/bin"
 export KREW_BIN="${KREW_ROOT:-${HOME}/.krew}/bin"
+
+export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="${KREW_BIN}:${GOBIN}:${PATH}"
 
 export KUBECONFIG="${HOME}/.kube/config"

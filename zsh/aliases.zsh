@@ -84,8 +84,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     brew doctor'
   alias fixbt='sudo killall coreaudiod'
   alias flushdns='sudo killall -HUP mDNSResponder'
-  alias sed=gsed
-  alias tar=gtar
 fi
 
 if (( $+commands[kubectl] )); then
